@@ -1,0 +1,29 @@
+.btn {
+    color: #fff;
+    background: rgb(213, 33, 59);
+    height: 42px;
+    border-radius: 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    line-height: 42px;
+    padding: 0 28px;
+    font-family: $robotobold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: background .3s ease;
+    &:hover{
+            background: rgb(213+10, 33+10, 59+10);
+            transition: background .3s ease;
+    }
+    &--green {
+        background: rgb(89, 213, 86);
+        &:hover{
+                background: rgb(89+10, 213+10, 86+10);
+                transition: background .3s ease;
+        }
+    }
+
+}

@@ -1,0 +1,255 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$canada-border-name: 'canada-border';
+$canada-border-x: 0px;
+$canada-border-y: 91px;
+$canada-border-offset-x: 0px;
+$canada-border-offset-y: -91px;
+$canada-border-width: 29px;
+$canada-border-height: 29px;
+$canada-border-total-width: 174px;
+$canada-border-total-height: 120px;
+$canada-border-image: 'sprite.png';
+$canada-border: (0px, 91px, 0px, -91px, 29px, 29px, 174px, 120px, 'sprite.png', 'canada-border', );
+$deu-name: 'deu';
+$deu-x: 116px;
+$deu-y: 91px;
+$deu-offset-x: -116px;
+$deu-offset-y: -91px;
+$deu-width: 24px;
+$deu-height: 24px;
+$deu-total-width: 174px;
+$deu-total-height: 120px;
+$deu-image: 'sprite.png';
+$deu: (116px, 91px, -116px, -91px, 24px, 24px, 174px, 120px, 'sprite.png', 'deu', );
+$eng-name: 'eng';
+$eng-x: 147px;
+$eng-y: 55px;
+$eng-offset-x: -147px;
+$eng-offset-y: -55px;
+$eng-width: 25px;
+$eng-height: 25px;
+$eng-total-width: 174px;
+$eng-total-height: 120px;
+$eng-image: 'sprite.png';
+$eng: (147px, 55px, -147px, -55px, 25px, 25px, 174px, 120px, 'sprite.png', 'eng', );
+$eu-border-name: 'eu-border';
+$eu-border-x: 58px;
+$eu-border-y: 91px;
+$eu-border-offset-x: -58px;
+$eu-border-offset-y: -91px;
+$eu-border-width: 29px;
+$eu-border-height: 29px;
+$eu-border-total-width: 174px;
+$eu-border-total-height: 120px;
+$eu-border-image: 'sprite.png';
+$eu-border: (58px, 91px, -58px, -91px, 29px, 29px, 174px, 120px, 'sprite.png', 'eu-border', );
+$letter-name: 'letter';
+$letter-x: 54px;
+$letter-y: 0px;
+$letter-offset-x: -54px;
+$letter-offset-y: 0px;
+$letter-width: 59px;
+$letter-height: 47px;
+$letter-total-width: 174px;
+$letter-total-height: 120px;
+$letter-image: 'sprite.png';
+$letter: (54px, 0px, -54px, 0px, 59px, 47px, 174px, 120px, 'sprite.png', 'letter', );
+$packages-icon-name: 'packages-icon';
+$packages-icon-x: 0px;
+$packages-icon-y: 55px;
+$packages-icon-offset-x: 0px;
+$packages-icon-offset-y: -55px;
+$packages-icon-width: 66px;
+$packages-icon-height: 36px;
+$packages-icon-total-width: 174px;
+$packages-icon-total-height: 120px;
+$packages-icon-image: 'sprite.png';
+$packages-icon: (0px, 55px, 0px, -55px, 66px, 36px, 174px, 120px, 'sprite.png', 'packages-icon', );
+$packeges-arrow-name: 'packeges-arrow';
+$packeges-arrow-x: 147px;
+$packeges-arrow-y: 105px;
+$packeges-arrow-offset-x: -147px;
+$packeges-arrow-offset-y: -105px;
+$packeges-arrow-width: 6px;
+$packeges-arrow-height: 10px;
+$packeges-arrow-total-width: 174px;
+$packeges-arrow-total-height: 120px;
+$packeges-arrow-image: 'sprite.png';
+$packeges-arrow: (147px, 105px, -147px, -105px, 6px, 10px, 174px, 120px, 'sprite.png', 'packeges-arrow', );
+$phone-name: 'phone';
+$phone-x: 113px;
+$phone-y: 0px;
+$phone-offset-x: -113px;
+$phone-offset-y: 0px;
+$phone-width: 34px;
+$phone-height: 64px;
+$phone-total-width: 174px;
+$phone-total-height: 120px;
+$phone-image: 'sprite.png';
+$phone: (113px, 0px, -113px, 0px, 34px, 64px, 174px, 120px, 'sprite.png', 'phone', );
+$pol-name: 'pol';
+$pol-x: 113px;
+$pol-y: 64px;
+$pol-offset-x: -113px;
+$pol-offset-y: -64px;
+$pol-width: 25px;
+$pol-height: 25px;
+$pol-total-width: 174px;
+$pol-total-height: 120px;
+$pol-image: 'sprite.png';
+$pol: (113px, 64px, -113px, -64px, 25px, 25px, 174px, 120px, 'sprite.png', 'pol', );
+$ru-border-name: 'ru-border';
+$ru-border-x: 87px;
+$ru-border-y: 91px;
+$ru-border-offset-x: -87px;
+$ru-border-offset-y: -91px;
+$ru-border-width: 29px;
+$ru-border-height: 29px;
+$ru-border-total-width: 174px;
+$ru-border-total-height: 120px;
+$ru-border-image: 'sprite.png';
+$ru-border: (87px, 91px, -87px, -91px, 29px, 29px, 174px, 120px, 'sprite.png', 'ru-border', );
+$rus-name: 'rus';
+$rus-x: 147px;
+$rus-y: 30px;
+$rus-offset-x: -147px;
+$rus-offset-y: -30px;
+$rus-width: 25px;
+$rus-height: 25px;
+$rus-total-width: 174px;
+$rus-total-height: 120px;
+$rus-image: 'sprite.png';
+$rus: (147px, 30px, -147px, -30px, 25px, 25px, 174px, 120px, 'sprite.png', 'rus', );
+$skype-name: 'skype';
+$skype-x: 0px;
+$skype-y: 0px;
+$skype-offset-x: 0px;
+$skype-offset-y: 0px;
+$skype-width: 54px;
+$skype-height: 55px;
+$skype-total-width: 174px;
+$skype-total-height: 120px;
+$skype-image: 'sprite.png';
+$skype: (0px, 0px, 0px, 0px, 54px, 55px, 174px, 120px, 'sprite.png', 'skype', );
+$telegram-name: 'telegram';
+$telegram-x: 66px;
+$telegram-y: 55px;
+$telegram-offset-x: -66px;
+$telegram-offset-y: -55px;
+$telegram-width: 30px;
+$telegram-height: 30px;
+$telegram-total-width: 174px;
+$telegram-total-height: 120px;
+$telegram-image: 'sprite.png';
+$telegram: (66px, 55px, -66px, -55px, 30px, 30px, 174px, 120px, 'sprite.png', 'telegram', );
+$uk-border-name: 'uk-border';
+$uk-border-x: 29px;
+$uk-border-y: 91px;
+$uk-border-offset-x: -29px;
+$uk-border-offset-y: -91px;
+$uk-border-width: 29px;
+$uk-border-height: 29px;
+$uk-border-total-width: 174px;
+$uk-border-total-height: 120px;
+$uk-border-image: 'sprite.png';
+$uk-border: (29px, 91px, -29px, -91px, 29px, 29px, 174px, 120px, 'sprite.png', 'uk-border', );
+$ukr-name: 'ukr';
+$ukr-x: 147px;
+$ukr-y: 80px;
+$ukr-offset-x: -147px;
+$ukr-offset-y: -80px;
+$ukr-width: 25px;
+$ukr-height: 25px;
+$ukr-total-width: 174px;
+$ukr-total-height: 120px;
+$ukr-image: 'sprite.png';
+$ukr: (147px, 80px, -147px, -80px, 25px, 25px, 174px, 120px, 'sprite.png', 'ukr', );
+$viber-name: 'viber';
+$viber-x: 147px;
+$viber-y: 0px;
+$viber-offset-x: -147px;
+$viber-offset-y: 0px;
+$viber-width: 27px;
+$viber-height: 30px;
+$viber-total-width: 174px;
+$viber-total-height: 120px;
+$viber-image: 'sprite.png';
+$viber: (147px, 0px, -147px, 0px, 27px, 30px, 174px, 120px, 'sprite.png', 'viber', );
+$spritesheet-width: 174px;
+$spritesheet-height: 120px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($canada-border, $deu, $eng, $eu-border, $letter, $packages-icon, $packeges-arrow, $phone, $pol, $ru-border, $rus, $skype, $telegram, $uk-border, $ukr, $viber, );
+$spritesheet: (174px, 120px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../img/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

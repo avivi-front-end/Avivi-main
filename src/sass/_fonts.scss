@@ -1,0 +1,31 @@
+//  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
+@mixin font-face($style-name, $file:$style-name, $weight:normal, $style:normal) {
+    $filepath: "fonts/" + $file;
+    @font-face {
+        font-family: quote($style-name);
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+        url($filepath + ".woff") format('woff'),
+        url($filepath + ".ttf")  format('truetype'),
+        url($filepath + ".svg#" + $style-name + "") format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face('RobotoRegular', 'RobotoRegular');
+@include font-face('RobotoBold', 'RobotoBold');
+@include font-face('RobotoMedium', 'RobotoMedium');
+@include font-face('RobotoMedium', 'RobotoMedium');
+@include font-face('RobotoLight', 'RobotoLight');
+@include font-face('RobotoSlabRegular', 'RobotoSlabRegular');
+@include font-face('RobotoSlabBold', 'RobotoSlabBold');
+@include font-face('Intro-Inline', 'IntroInline');
+
+$robotoreg: "RobotoRegular", Arial,sans-serif;
+$robotobold: "RobotoBold", Arial,sans-serif;
+$robotomed: "RobotoMedium", Arial,sans-serif;
+$robotolight: "RobotoLight", Arial,sans-serif;
+$robotoslabreg: "RobotoSlabRegular", Arial,sans-serif;
+$robotoslabbold: "RobotoSlabBold", Arial,sans-serif;
+$intro: "Intro-Inline";

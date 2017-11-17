@@ -18,27 +18,25 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
-        img: 'build/images/',
+        img: 'build/img/',
         fonts: 'build/fonts/',
-        php:'build/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/sass/**/*.scss',
-        img: 'src/images/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*',
-        php:'src/*.php',
-        sprite:'src/images/sprite.svg'
+        sprite:'src/img/sprite.svg'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/*.html',
-        part:'src/partials/*.html' ,
-        sprite:'src/images/sprite.svg',
+        part:'src/chunks/*.html' ,
+        sprite:'src/img/sprite.svg',
         js: 'src/js/*.js',
-        jsplug:  'src/js/plagins/*.js',
+        jsplug:  'src/js/plugins/*.js',
         style: 'src/sass/*.scss',
-        img: 'src/images/*.*'
+        img: 'src/img/*.*'
     },
     clean: './build'
 };
@@ -95,25 +93,18 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts));
 });
 
-gulp.task('php:build',function(){
-    gulp.src(path.src.php)
-        .pipe(gulp.dest(path.build.php));
-});
 gulp.task('sprite:build',function(){
     gulp.src(path.src.sprite)
         .pipe(gulp.dest(path.build.img));
 });
 
-
 gulp.task('build', [
-    'clear:prod',
     'html:build',
     'js:build',
     'sprite:build',
     'style:build',
     'fonts:build',
-    'image:build',
-    'php:build'
+    'image:build'
 ]);
 
 gulp.task('watch', function(){
@@ -166,11 +157,11 @@ gulp.task('prod_css',['clean_css'],function() {
 });
 
 gulp.task('clean_js',['prod_js'], function () {
-    return gulp.src(['./build/js/plagins/', './build/js/basic_scripts.js', './build/js/develop/'], {read: false})
+    return gulp.src(['./build/js/plugins/', './build/js/basic_scripts.js', './build/js/develop/'], {read: false})
         .pipe(clean());
 });
 gulp.task('prod_js', function() {
-    return gulp.src(['./build/js/plagins/*.js', './build/js/basic_scripts.js', './build/js/develop/*.js'])
+    return gulp.src(['./build/js/plugins/*.js', './build/js/basic_scripts.js', './build/js/develop/*.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js));
 });
