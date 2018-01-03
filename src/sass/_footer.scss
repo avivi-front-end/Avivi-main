@@ -1,0 +1,237 @@
+/* .consult {
+  overflow: hidden;
+  background: url("../img/consult-bg.jpg") no-repeat center 90px #eceff7;
+  background-size: 1920px auto;
+  padding-bottom: 73px;
+  &_white {
+    background: url("../img/consult-bg.jpg") no-repeat center 90px #fff;
+    background-size: 1920px auto;
+  }
+  &_vacance {
+    background: url("../img/vacance-bg.jpg") no-repeat center 90px #fff;
+    background-size: 1920px auto;
+  }
+  &__title {
+    color: #4b586d;
+    font-family: $robotoslabreg;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 49px;
+    &:before {
+      display: block;
+      width: 250px;
+      position: absolute;
+      content: '';
+      height: 3px;
+      background: #59d556;
+      left: 0;
+      top: 34px;
+    }
+    &:after {
+      display: block;
+      width: 250px;
+      position: absolute;
+      content: '';
+      height: 3px;
+      background: #59d556;
+      right: 0;
+      top: 34px;
+    }
+  }
+  &__order {
+    .consult__title {
+      &:after, &:before {
+        width: 200px;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    border-left: 3px solid #59d556;
+    border-right: 3px solid #59d556;
+  }
+  .form-group {
+    width: 290px;
+    float: left;
+    position: relative;
+    label {
+      display: block;
+      float: left;
+      width: auto;
+      font-size: 15px;
+      color: #ffffff;
+      padding-left: 2px;
+      padding-top: 17px;
+      font-family:$robotoslabbold;
+    }
+    &_center {
+      width: 315px;
+      margin-left: 40px;
+      margin-right: 40px;
+      position: relative;
+    }
+    &_area {
+      padding-top: 13px;
+      width: 100%;
+      float: none;
+      clear: both;
+      margin-bottom: 30px;
+      position: relative;
+
+    }
+    &_text {
+      font-size: 14px;
+      text-align: center;
+      color: #59d556;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      width: 100%;
+      float: none;
+      font-family:$robotoreg;
+      padding-bottom: 10px;
+    }
+    &_submit {
+      margin-top:0px;
+      text-align: center;
+      position: relative;
+      bottom: -19px;
+      cursor: pointer;
+      &:before {
+        display: block;
+        width: 453px;
+        position: absolute;
+        content: '';
+        height: 3px;
+        background: #59d556;
+        left: -101px;
+        top: 22px;
+      }
+      &:after {
+        display: block;
+        width: 453px;
+        position: absolute;
+        content: '';
+        height: 3px;
+        background: #59d556;
+        right: -101px;
+        top: 22px;
+      }
+      button {min-width: 220px;border: none;cursor: pointer;}
+    }
+    &__input {
+      display: block;
+      width: 223px;
+      float: right;
+      background: none;
+      border: none;
+      font-size: 15px;
+      color: #ffffff;
+      height: 32px;
+      font-family: $robotoreg;
+      border-bottom: #cbcfd5 solid 1px;
+    }
+    &__textarea {
+      background: none;
+      height: 81px;
+      border-radius: 18px;
+      padding: 15px 20px;
+      width: 100%;
+      font-size: 15px;
+      color: #fff;
+      resize: none;
+      border: #fff solid 1px;
+    }
+  }
+  &__form { width: 977px; margin-left: auto; margin-right: auto; display: block;}
+}
+
+.consult.consult_vacance {
+  background: url("../img/vacance-bg.jpg") no-repeat center 90px #fff;
+  background-size: auto 85%;
+  background-position: center 85px;
+  .form-group { width: auto; float: none;
+    label {width: 77px;}
+    label.error { width: 20px; margin-top: 0; padding-top: 0; bottom: 7px;}
+    &__input {
+      display: block;
+      float: none;
+      width: 100%;
+      margin-left: 85px;
+      max-width: 385px;
+    }
+  }
+  .consult__title {
+    margin-bottom: 53px;
+  }
+  .form-group_area {
+    padding-top: 16px;
+    margin-bottom: 10px;
+  }
+  .form-group__textarea {
+    height: 70px;
+  }
+  .header__order-form-group--file {
+    width: 220px;
+    margin-top: 0;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    label {
+      padding: 0;
+      width: auto;
+    }
+    .header__order-icon {
+      background: #ffffff;
+      &:before {
+        color: #545c6c;
+      }
+      &:hover {
+        background: #3bab51;
+        &:before {
+          color: #ffffff;
+        }
+      }
+    }
+    .header__order-file-item {
+      text-transform: uppercase;
+      color: #59d556;
+      a.header__order-remove {
+        background: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        &:before {
+          color: #545c6c;
+        }
+        &:hover {
+          background: #d5213b;
+          border-color: #d5213b;
+          &:before {
+            color: #fff;
+          }
+        }
+      }
+    }
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #59d556;
+      text-align: left;
+      display: inline-block;
+      top: -4px;
+      position: relative;
+      left: -12px;
+    }
+    .header__order-icon {
+      position: relative;
+      left: auto;
+      top: auto;
+      text-align: center;
+      font-size: 12px;
+      margin-right: 17px;
+      display: inline-block;
+    }
+  }
+} */

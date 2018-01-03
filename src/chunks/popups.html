@@ -1,4 +1,4 @@
-<div class="pop-up-wrapper">
+<div class="pop-up-wrapper hed">
     <div class="pop-up-video">
         <a href="#" class="pop-up-video__close js-close-pop">
             <i class="icon">
@@ -27,31 +27,29 @@
             <form id="orderform">
                 <div class="header__order-form">
                     <div class="header__order-form-group">
-                        <input type="text" name="name" placeholder="Ваше имя" class="header__order-form-input">
+                        <input type="text" name="name" required="required" placeholder="Ваше имя" class="header__order-form-input">
                     </div>
                     <div class="header__order-form-group">
-                        <input type="text" name="email" placeholder="Ваш e-mail" class="header__order-form-input">
+                        <input type="text" name="email" required="required" placeholder="Ваш e-mail" class="header__order-form-input">
                     </div>
                     <div class="header__order-form-group">
-                        <input type="number" name="phone" placeholder="Ваш телефон" class="header__order-form-input">
+                        <input type="number" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input">
                     </div>
                     <div class="header__order-form-group">
                         <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
                     </div>
                 </div>
             </form>
-            <div class="clearfix">
-                <div class="header__order-form-group--file">
-                    <div class="header__order-file-name"></div>
-                    <label>
-                        <span class="header__order-icon"></span>
-                        <input class="js-input-file" name="user_file" type="file">
-                        <span>Вы можете прикрепить файл</span>
+            <div class="header__order-bot">
+                <div class="send-file">
+                    <div class="send-file__name"></div>
+                    <label class="send-file__label">
+                        <span class="send-file__icon"></span>
+                        <input class="js-input-file send-file__input" name="user_file" type="file">
+                        <span class="send-file__text">Вы можете прикрепить файл</span>
                     </label>
                 </div>
-                <div class="header__order-form-group--submit">
-                    <button type="submit" class="btn">Отправить заявку</button>
-                </div>
+                <button type="submit" class="btn">Отправить заявку</button>
             </div>
         </div>
     </div>

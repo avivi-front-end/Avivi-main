@@ -1,7 +1,35 @@
+@media (max-width: 1500px){
+    .anchors{
+        left: calc(100vw - 81px);
+    }
+    .header{
+        &__order-wrapper{padding-right: 70px;}
+    }
+    .r-slider{
+        &__bg{
+            right: 0;
+            left: 70%;
+        }
+        &__pol{
+            &:after{
+                width: 15%;
+            }
+        }
+    }
+}
+@media(min-width: 992px) and (max-width: 1500px){
+    .b-slider{
+        &:after{width: 15%;}
+        &__bg{right: auto; left: 80%;}
+    }
+}
 @media (max-width: 1450px){
     .header{
         &__menu-btn{left: 30px;}
         &__language{right: 15px;}
+    }
+    .contacts{
+        &__copyright{right: 20px; bottom: 20px;}
     }
 }
 @media (max-width: 1350px){
@@ -25,10 +53,59 @@
         .container{max-width: none; width: auto; margin: 0;}
     }
     .mob-menu{height: calc(100vh - 77px);
-        &__main-wrapper{top: 77px;}
+        &__wrap{top: 77px;}
+    }
+    .clients{
+        &__slider-arrow{
+            &.right{right: 0;}
+            &.left{left: 0;}
+        }
+    }
+}
+@media(max-width: 1200px){
+    .made-in{overflow: hidden;
+        &:after{max-width: none; width: auto; transform: none; left: 15px; right: 15px;}
+        .section-title{max-width: none; margin: 0 15px 58px;}
+    }
+    .consult{
+        &__text{padding: 60px 50px 60px 60px;}
+    }
+    .contacts{
+        &__info-wrapper{margin-bottom: 51px;}
+        &__photo-wrapper {
+            &:nth-child(1) {
+                height: 25%;
+                width: 100%;
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                height: 25%;
+                width: 100%;
+            }
+            &:nth-child(4) {
+                display: none;
+            }
+            &:nth-child(5) {
+                height: 25%;
+                width: 100%;
+            }
+            &:nth-child(6) {
+                display: none;
+            }
+            &:nth-child(7) {
+                height: 25%;
+                width: 100%;
+            }
+        }
     }
 }
 @media (max-width: 1182px){
+    .header{
+        &__order-main-wrapper{width: 70%; right: -10px;}
+        &__order-wrapper{ padding-right: 50px; padding-left: 80px;}
+    }
     .mob-menu{padding-left: 70px;}
     .first-screen{min-height: 373px;
         &__btn-play, &__sub-title{display: none;}
@@ -48,15 +125,94 @@
         &__text{font-size: 14px;}
         &__top{margin-bottom: 40px;}
     }
+    .contacts{
+        &__photo, &__info{width: 50%; flex-shrink: 0;}
+    }
+}
+@media(max-width: 992px){
+    .b-slider{height: 620px;
+        &__bg{width: 355px; top: 6px; right: -8.5%;}
+        &:after{width: 175px;}
+        &__title{font-size: 28px; margin-bottom: 20px;
+            &:after{display: none;}
+        }
+        &__promo{width: 420px;}
+        &__text{
+            p{
+                &:nth-child(3){display: none;}
+            }
+        }
+    }
+    .made-in{
+        &__btn{margin: 0 1px;}
+        &__right{display: none;}
+        &__left{flex-basis: 100%; max-width: 100%;}
+        .b-slider{border-right: none;}
+    }
+    .bottom-line{display: none;}
+    .consult{
+        display: block;
+        &__left{display: none;}
+        &__right{
+            padding: 80px 15px 70px;
+            .section-title{
+                white-space: normal;
+                position: static;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        &__mob-title{
+            display: block;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &__logo{display: none;}
+        &__form{margin: 0 auto; justify-content: center;}
+    }
+    .services{
+        padding-bottom: 0;
+    }
+    .clients{
+        &__bottom-wrapper{padding: 40px 38px 26px;}
+    }
+    .consult{
+        &__inner{margin: 0 15px;}
+    }
+    .contacts{
+        &__city-info{padding-left: 50px;
+            .icon{left: 0;}
+        }
+    }
 }
 @media (max-width: 860px){
     .header{
-        &__phone-link{margin-top: 0; top: 50%; transform: translateY(-50%); position: absolute; right: 15px; height: 46px; width: 45px; overflow: hidden;}
+        &__phone-link{margin-top: 0; top: 50%; transform: translateY(-50%); position: absolute; right: 15px; height: 46px; width: 45px; overflow: hidden;
+            .icon{left: auto; right: 0;}
+        }
         &__language{display: none;}
     }
     .first-screen{min-height: 255px; padding: 20px 0 92px;}
 }
 @media (max-width: 778px){
+    .made-in{
+        &:after{top: 16px;}
+    }
+    .b-slider{
+        &__boch{background-size: 150px; background-position: 4% 90%}
+        &__bg{width: 275px;}
+        &__text{max-width: 320px;
+            p{font-size: 12px;}
+            a{font-size: 15px;}
+        }
+    }
+    .section-title{font-size: 36px;}
+    .header{
+        &__order-main-wrapper{width: auto; left: 0; right: 0;}
+        &__order-wrapper{padding-right: 20px; padding-left: 20px;}
+        &__order-close{width: 34px; height: 34px;}
+        &__order-title{padding-left: 60px; text-align: center;}
+    }
     .mob-menu{padding-left: 45px;}
     .first-screen{
         &__title{font-size: 30px; line-height: 36px; margin-bottom: 28px;}
@@ -65,14 +221,27 @@
         &__top{flex-wrap: wrap; justify-content: center;}
         &__item{width: 50%; margin-bottom: 20px;}
         &__partner-wrap{text-align: center; padding-left: 0;
-            &:before{position: static; display: block; margin: 0 auto;}
+            &:before{position: static; display: block; margin: 0 auto; transform: none;}
         }
         &__right{
-            p{margin-bottom: 15px;}
+            p{margin-bottom: 15px; text-align: center;}
         }
+    }
+    .contacts{
+        &__photos{display: none;}
+        &__info{width: 100%;
+            &-wrapper{max-width: none;}
+        }
+        &__map{height: 262px;}
     }
 }
 @media (max-width: 600px){
+    .consult{
+        &__right{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
     .about{
         &__left{font-size: 40px;}
         &__right{padding-left: 0; padding-right: 0;}
@@ -84,7 +253,71 @@
         &__banners{flex-direction: column; align-items: center;}
     }
 }
+@media(max-width: 570px){
+    .made-in{
+        &:after{bottom: 71px;}
+        .section-title{margin-bottom: 26px; font-size: 30px;
+            span{padding: 0 12px;}
+        }
+        &__controls{margin-top: 12px;}
+        &__btn{height: 44px; width: 57px;}
+    }
+    .b-slider{height: 480px;
+        &:after{right: -30px;}
+        &__bg{top: 15px; right: -38.5%;}
+        &__text{padding: 28px 0 0 15px; margin-bottom: 27px; max-width: 162px;
+            p{line-height: 15px; margin-bottom: 0;}
+            a{margin: 24px 0 0 0px;}
+        }
+        &__promo{width: 293px; margin: 0 auto;}
+    }
+}
+@media(max-width: 500px){
+    .header{
+        &__order-bot{flex-direction: column; margin-top: 20px;}
+        &__order-form-textarea{height: 100px;}
+        &__order-close{ top: 10px; left: 10px;
+            svg{width: 34px; height: 34px;}
+        }
+        &__order-title{font-size: 40px; padding-left: 0;}
+        &__order-text{font-size: 13px; margin-bottom: 20px;}
+        &__order-form-input{height: 38px;}
+    }
+    .send-file{margin-bottom: 20px;}
+}
 @media (max-width: 480px){
+    .consult{
+        &__right{
+            padding-top: 44px;
+            .section-title{font-size: 30px; margin-bottom: 23px; line-height: 34px;}
+            .btn{margin-top: 26px;}
+        }
+        &__col{
+            margin-bottom: 13px;
+            input{height: 43px;}
+            textarea{
+                padding: 13px 20px;
+                height: 128px;
+            }
+        }
+        &__mob-title{font-size: 13px;}
+        &__col{
+            padding: 0;
+            &:nth-child(2), &:nth-child(3){
+                width: 100%;
+            } 
+        }
+    }
+    .header{
+        justify-content: flex-end; padding: 12px 0;
+        &__main{align-items: center;}
+        &__logo{width: 65px;}
+        &__project-btn{margin: 9px 0 0 20px; padding: 11px; font-size: 10px; }
+        &__phone-link{display: none;}
+    }
+    .mob-menu{padding: 20px 10px 10px 30px;
+        &__wrap{top: 65px;}
+    }
     .about{
         &__item{width: 100%;}
     }
