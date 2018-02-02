@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="pop-up-wrapper hed">
+    <div class="pop-up-video">
+        <a href="#" class="pop-up-video__close js-close-pop">
+            <i class="icon">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </i>
+        </a>
+        <div class="pop-up-video__video-wrapper"></div>
+    </div>
+    <div class="header__order-main-wrapper js-modal-wrapper">
+        <div class="header__order-wrapper js-modal">
+            <a href="#" class="header__order-close js-order-close">
+                <i class="icon">
+                    <svg>
+                        <use xlink:href="#close-icon"></use>
+                    </svg>
+                </i>
+            </a>
+            <div class="header__order-title">Заказать проект</div>
+            <div class="header__order-text">
+                Оставьте заявку для получения коммерческого предложения. <br>
+                Заполните форму и мы вышлем Вам предложение в котором решим, <br>
+                чем можем вам помочь.
+            </div>
+            <form>
+                <div class="header__order-form">
+                    <div class="header__order-form-group">
+                        <input type="text" name="name" required="required" placeholder="Ваше имя" class="header__order-form-input">
+                    </div>
+                    <div class="header__order-form-group">
+                        <input type="text" name="email" required="required" placeholder="Ваш e-mail" class="header__order-form-input">
+                    </div>
+                    <div class="header__order-form-group">
+                        <input type="number" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input">
+                    </div>
+                    <div class="header__order-form-group">
+                        <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
+                    </div>
+                </div>
+            </form>
+            <div class="header__order-bot">
+                <div class="send-file">
+                    <div class="send-file__name"></div>
+                    <label class="send-file__label">
+                        <span class="send-file__icon"></span>
+                        <input class="js-input-file send-file__input" name="user_file" type="file">
+                        <span class="send-file__text">Вы можете прикрепить файл</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn">Отправить заявку</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-wrapper">
+    <div class="overlay"></div>
+    <!-- HEADER -->
+    <div class="overlay"></div>
+    <header class="header" id="header">
+        <a class="header__menu-btn js-show-menu" href="#">
+            <span class="open">
+                <svg>
+                    <use xlink:href="#menu-icon"></use>
+                </svg>
+            </span>
+            <span class="close">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </span>
+        </a>
+        <div class="mob-menu__wrap  open js-modal-wrapper">
+            <div class="mob-menu js-modal">
+                <ul class="mob-menu-list">
+                    <li class="mob-menu__item mob-menu__item--team mob-menu__item--mobileOnly">
+                        <a class="mob-menu__link" href="#">Команда</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#team-icon"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--career mob-menu__item--mobileOnly">
+                        <a class="mob-menu__link" href="#">Карьера</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#career"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--blog mob-menu__item--mobileOnly">
+                        <a class="mob-menu__link" href="#">Блог</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#blog"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--contacts mob-menu__item--mobileOnly">
+                        <a class="mob-menu__link" href="#">Контакты</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#contacts"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--openMenu">
+                        <a class="mob-menu__link mob-menu__call-dop js-call-dopmenu" href="#">Услуги</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#services-btn"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--bitrix">
+                        <a class="mob-menu__link" href="#">Битрикс</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#bitrix"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--bitrix24">
+                        <a class="mob-menu__link" href="#">Битрикс 24</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#bitrix-24"></use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="mob-menu-contacts">
+                    <li class="mob-menu__item mob-menu-contacts__phone">
+                        <span class="icon-wrap">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#phone-footer-icon"></use>
+                                </svg>
+                            </i>
+                        </span>
+                        <a class="mob-menu__link" href="tel:+380443900439">+380 44 3900439</a>
+                    </li>
+                    <li class="mob-menu__item mob-menu-contacts__email">
+                        <span class="icon-wrap">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#email-footer-icon"></use>
+                                </svg>
+                            </i>
+                        </span>
+                        <a class="mob-menu__link" href="mailto:hello@avivi.pro">hello@avivi.pro</a>
+                    </li>
+                </ul>
+                <div class="contacts__social-links mob-menu__social">
+                    <a class="contacts__social-link contacts__social-link--fb" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#fb"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="contacts__social-link contacts__social-link--vk" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="contacts__social-link contacts__social-link--google" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#g+"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="contacts__social-link contacts__social-link--insta" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#insta"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="contacts__social-link contacts__social-link--youtube" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#youtube"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="contacts__social-link contacts__social-link--linkedin" href="#">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#linkedin"></use>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+                <a href="#" class="header__map-link">Карта сайта</a>
+                <div class="mob-menu__lang">
+                    <a class="mob-menu__lang-link active" href="#">Rus</a>
+                    <a class="mob-menu__lang-link" href="#">Ukr</a>
+                    <a class="mob-menu__lang-link" href="#">Pol</a>
+                    <a class="mob-menu__lang-link" href="#">Eng</a>
+                    <a class="mob-menu__lang-link" href="#">De</a>
+                </div>
+            </div>
+            <div class="mob-menu__dop">
+                <a href="#" class="mob-menu__dop-close">Назад в меню</a>
+                <ul class="mob-menu-list">
+                    <li class="mob-menu__item mob-menu__item--services ">
+                        <a class="mob-menu__link" href="#">Аудит сайтов</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#audit">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--services ">
+                        <a class="mob-menu__link" href="#">Создание интернет-магазинов</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#shopcreate">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--services ">
+                        <a class="mob-menu__link" href="#">Проектирование и Дизайн</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#services">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--price ">
+                        <a class="mob-menu__link" href="#">Техническая поддержка</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#price">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--options ">
+                        <a class="mob-menu__link" href="#">Внедрение и настройка CRM Bitrix 24</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#options">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                    <li class="mob-menu__item mob-menu__item--options ">
+                        <a class="mob-menu__link" href="#">Создание сайтов</a>
+                        <span class="icon-wrap">
+                            <i class="icon-circle">
+                                <svg>
+                                    <use xlink:href="#circle"></use>
+                                </svg>
+                            </i>
+                            <i class="icon-btn">
+                                <svg>
+                                    <use xlink:href="#sitecreate">"&gt;</use>
+                                </svg>
+                            </i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__main container">
+            <a class="header__logo" href="index.html"><img src="img/logo.svg"></a>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Команда</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Карьера</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Блог</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <a class="header__phone-link" href="tel:+380682020200">
+                <i class="icon">
+                    <svg>
+                        <use xlink:href="#phone-icon"></use>
+                    </svg>
+                </i>
+                +380 44 3900439
+            </a>
+            <a class="btn header__project-btn js-show-pop js-show-order" href="#">Заказать проект</a>
+        </div>
+    
+        <div class="header__language js-show-language">
+            <div class="header__language-name header__language-name--rus">Rus</div>
+            <ul class="header__lang-list">
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--ukr" href="#">Ukr</a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--pol" href="#">Pol</a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--eng" href="#">Eng</a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--de" href="#">de</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- /HEADER -->
+    <div class="page-body">
+        <div class="b24-crm">
+            <section class="first-screen first-screen__b24">
+                <div class="container">
+                    <h1 class="first-screen__title">Внедрение Битрикс24</h1>
+                    <div class="first-screen__sub-title">Наши специалисты помогут в реализации проектов любой сложности и справятся с любой задачей</div>
+                    <a href="#next" class="first-screen__scroll js-scroll-anchor">
+                        <i class="icon">
+                            <svg>
+                                <use xlink:href="#scroll-arrow"></use>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+            </section>
+            <div class="container">
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li>Внедрение Битрикс24</li>
+                    </ul>
+                </div>
+                <div class="b24-page__automatic" id="next">
+                    <div class="section-title section-title--underline">Автоматизация бизнеса</div>
+                    <div class="b24-page__banner">
+                        <div class="b24-page__banner-col">
+                            <img src="img/bitrix24-banner-1.png" alt="banner">
+                            <a href="#">Битрикс24: Облако</a>
+                        </div>
+                        <div class="b24-page__banner-col">
+                            <img src="img/bitrix24-banner-2.png" alt="banner">
+                            <a href="#">Битрикс24: Коробочная версия</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="consult">
+                <div class="consult__title">
+                    <div class="consult__title-left">Записаться На Консультацию</div>
+                    <div class="consult__title-right">Записаться На Консультацию</div>
+                </div>
+                <div class="consult__left">
+                    <!-- <div class="section-title">Записаться На Консультацию</div> -->
+                    <div class="consult__text">
+                        <img src="img/gr-cons.png" class="consult__logo" alt="logo">
+                        Мы свяжемся<br>
+                        с вами<br>
+                        <span>в течении<br>
+                        10 минут</span>
+                    </div>
+                </div>
+                <div class="consult__right">
+                    <img src="img/wt-cons.png" class="consult__logo" alt="logo">
+                    <img src="img/laptop.jpg" alt="laptop" class="consult__bg">
+                    <!-- <div class="section-title">Записаться На Консультацию</div> -->
+                    <div class="consult__mob-title">Мы свяжемся с вами <span>в течении 10 минут</span></div>
+                    <form class="consult__form">
+                        <div class="consult__col">
+                            <input type="text" placeholder="ФИО" required="required">
+                        </div>
+                        <div class="consult__col">
+                            <input type="text" placeholder="Телефон" required="required">
+                        </div>
+                        <div class="consult__col">
+                            <input type="text" placeholder="Почта" required="required">
+                        </div>
+                        <div class="consult__col">
+                            <textarea type="text" placeholder="Сообщение" required="required"></textarea>
+                        </div>
+                        <button class="btn btn--green">Отправить</button>
+                    </form>
+                </div>
+            </section>
+            <div class="b24-page__main">
+                <div class="container">
+                    <section class="b24-why">
+                        <div class="section-title section-title--underline">Почему мы?</div>
+                        <div class="b24-why__container">
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <svg class="b24-why__svg">
+                                        <use xlink:href="#why_we_1"></use>
+                                    </svg>
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">Обратная связь в течении 10 минут!</div>
+                                <div class="b24-why__subtitle">Быстрее других</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <svg class="b24-why__svg">
+                                        <use xlink:href="#why_we_2"></use>
+                                    </svg>
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">Бесплатная консультация</div>
+                                <div class="b24-why__subtitle">Не навязываем. Решаем Вашу проблему</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <svg class="b24-why__svg">
+                                        <use xlink:href="#why_we_3"></use>
+                                    </svg>
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">Персональный менеджер</div>
+                                <div class="b24-why__subtitle">Индивидуальный подход</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <svg class="b24-why__svg">
+                                        <use xlink:href="#why_we_4"></use>
+                                    </svg>
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">Сопровождение после приобретения</div>
+                                <div class="b24-why__subtitle">Не бросим Вас после продажи</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <img src="img/why_we_5.png" alt="why">
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_green"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">11 сертифицированных разработчиков</div>
+                                <div class="b24-why__subtitle">Больше, чем у всех</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <img src="img/why_we_6.png" alt="why">
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">30 сертифицированных специалистов</div>
+                                <div class="b24-why__subtitle">Команда профи</div>
+                            </div>
+                            <div class="b24-why__col">
+                                <div class="b24-why__icon">
+                                    <svg class="b24-why__svg">
+                                        <use xlink:href="#why_we_7"></use>
+                                    </svg>
+                                    <svg class="b24-why__circle">
+                                        <use xlink:href="#why_we_circle"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-why__title">11 лет опыта внедрения IT решений</div>
+                                <div class="b24-why__subtitle">Успешная реализация сложных задач</div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="b24-pack">
+                        <div class="section-title section-title--underline">Пакеты внедрения Битрикс24</div>
+                        <div class="b24-pack__row">
+                            <div class="b24-pack__col">
+                                <div class="b24-pack__top">
+                                    <div class="b24-pack__title">Начальный</div>
+                                </div>
+                                <div class="b24-pack__list">
+                                    <li>Регистрация портала (Облако)</li>
+                                    <li>Приглашение сотрудников и настройка структуры компании</li>
+                                    <li>Подключение почты</li>
+                                    <li>Настройка воронки лидов и счетов</li>
+                                    <li>Настройка телефонии SIP</li>
+                                </div>
+                                <div class="b24-pack__bottom">
+                                    <div class="b24-pack__price">9000 грн</div>
+                                    <a href="#" class="btn btn--green">заказать</a>
+                                </div>
+                            </div>
+                            <div class="b24-pack__col">
+                                <div class="b24-pack__top">
+                                    <div class="b24-pack__title">Профессиональный</div>
+                                </div>
+                                <div class="b24-pack__list">
+                                    <li>Регистрация портала (облако)</li>
+                                    <li>Приглашение сотрудников и настройка структуры компании</li>
+                                    <li>Настройка рабочего дня сотрудников и дневных отчетов</li>
+                                    <li>Подключение почты</li>
+                                    <li>Настройка прав доступа</li>
+                                    <li>Настройка воронки лидов и счетов</li>
+                                    <li>Настройка телефонии SIP</li>
+                                    <li>Интеграция с сайтом (до 3х)</li>
+                                    <li>Настройка открытых линий</li>
+                                    <li>Консультации 8 часов</li>
+                                </div>
+                                <div class="b24-pack__bottom">
+                                    <div class="b24-pack__price">15000 грн</div>
+                                    <a href="#" class="btn btn--green">заказать</a>
+                                </div>
+                            </div>
+                            <div class="b24-pack__col">
+                                <div class="b24-pack__top">
+                                    <div class="b24-pack__title">Эксперт</div>
+                                </div>
+                                <div class="b24-pack__list">
+                                    <li>Регистрация портала (коробка)</li>
+                                    <li>Настройка сервера под требования Битрикс24</li>
+                                    <li>Настройка корпоративного интерфейса</li>
+                                    <li>Приглашение сотрудников и настройка структуры компании</li>
+                                    <li>настройка рабочего дня сотрудников и дневных отчетов</li>
+                                    <li>Подключение почты</li>
+                                    <li>Настройка прав доступа</li>
+                                    <li>Настройка воронки лидов и счетов</li>
+                                    <li>Настройка телефонии SIP</li>
+                                    <li>Интеграция с сайтом, (до 3х)</li>
+                                    <li>Настройка открытых линий</li>
+                                    <li>Консультации 12 часов</li>
+                                    <li>1 год поддержки обновления системы</li>
+                                </div>
+                                <div class="b24-pack__bottom">
+                                    <div class="b24-pack__price">21000 грн</div>
+                                    <a href="#" class="btn btn--green">заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b24-page__bottom">
+                <div class="container">
+                    <div class="b24-our">
+                        <div class="section-title section-title--underline">Наши возможности</div>
+                        <div class="b24-our__wrap">
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-1"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Внедрение Битрикс24 в Ваш бизнес без ущерба и простоев.</div>
+                            </div>
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-2"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Настройка телефонии и CRM</div>
+                            </div>
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-3"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Консультация по работе и обучение персонала</div>
+                            </div>
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-4"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Написание персональных модулей под Ваши задачи</div>
+                            </div>
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-5"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Интеграция с сторонним программным обеспечением</div>
+                            </div>
+                            <div class="b24-our__item">
+                                <div class="b24-our__icon">
+                                    <svg>
+                                        <use xlink:href="#capabilities-6"></use>
+                                    </svg>
+                                </div>
+                                <div class="b24-our__text">Любые другие работы по Битрикс24 не зависимо от сложности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b24-opportunity">
+                    <div class="b24-our__shape"></div>
+                    <div class="container">
+                        <div class="section-title section-title--underline">ПОЛУЧИТЕ ВОЗМОЖНОСТЬ УВЕЛИЧИТЬ ЭФФЕКТИВНОСТЬ КОМПАНИИ</div>
+                        <div class="b24-opportunity__info">
+                            Если даже у Вас уже есть Битрикс24 но вы не знаете что с ним делать,<br>
+                            <span>Обращайтесь прямо сейчас!</span>
+                        </div>
+                        <div class="b24-opportunity__arrow">
+                            <svg>
+                                <use xlink:href="#capabilities-arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <section class="consult">
+        <div class="consult__title">
+            <div class="consult__title-left">Записаться На Консультацию</div>
+            <div class="consult__title-right">Записаться На Консультацию</div>
+        </div>
+        <div class="consult__left">
+            <div class="consult__text">
+                <img src="img/gr-cons.png" class="consult__logo" alt="logo">
+                Мы свяжемся<br>
+                с вами<br>
+                <span>в течении<br>
+                10 минут</span>
+            </div>
+        </div>
+        <div class="consult__right">
+            <img src="img/wt-cons.png" class="consult__logo" alt="logo">
+            <img src="img/laptop.jpg" alt="laptop" class="consult__bg">
+            <div class="consult__mob-title">Мы свяжемся с вами <span>в течении 10 минут</span></div>
+            <form class="consult__form">
+                <div class="consult__col">
+                    <input type="text" placeholder="ФИО" required="required">
+                </div>
+                <div class="consult__col">
+                    <input type="text" placeholder="Телефон" required="required">
+                </div>
+                <div class="consult__col">
+                    <input type="text" placeholder="Почта" required="required">
+                </div>
+                <div class="consult__col">
+                    <textarea type="text" placeholder="Сообщение" required="required"></textarea>
+                </div>
+                <button class="btn btn--green">Отправить</button>
+            </form>
+        </div>
+    </section>
+    <section class="js-section contacts" id="footer">
+        <div class="contacts__copyright">
+            <a href="#" class="smaplink-footer">Карта сайта</a>
+            <span>© 2007-2017 Digital Production «Аvivi»</span>
+        </div>
+        <div class="contacts__wrapper">
+            <div class="contacts__info">
+                <div class="contacts__info-wrapper">
+                    <a href="#" class="section-title section-title--underline contacts__title">Контакты</a>
+                    <div class="contacts__city-location-wrap">
+                        <a class="contacts__city-link active js-change-town" href="#kiev">Киев</a>
+                        <a class="contacts__city-link js-change-town" href="#khmelnitsky">Хмельницкий</a>
+                    </div>
+                    <div class="contacts__city-info-wrap active" id="kiev">
+                        <div class="contacts__city-info contacts__city-info--adress">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#adress-icon"></use>
+                                </svg>
+                            </i>
+                            Днепровская набережная, 13
+                        </div>
+                        <div class="contacts__city-info contacts__city-info--phone">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#phone-footer-icon"></use>
+                                </svg>
+                            </i>
+                            <a class="contacts__city-info-phone-link" href="tel:+380443900439">+380 44 3900439</a>
+                        </div>
+                        <div class="contacts__city-info contacts__city-info--email">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#email-footer-icon"></use>
+                                </svg>
+                            </i>
+                            <a class="contacts__city-info-email-link" href="mailto:hello@avivi.pro">hello@avivi.pro</a>
+                        </div>
+                    </div>
+                    <div class="contacts__city-info-wrap" id="khmelnitsky">
+                        <div class="contacts__city-info contacts__city-info--adress">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#adress-icon"></use>
+                                </svg>
+                            </i>Подольская, 109
+                        </div>
+                        <div class="contacts__city-info contacts__city-info--phone">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#phone-footer-icon"></use>
+                                </svg>
+                            </i>
+                            <a class="contacts__city-info-phone-link" href="tel:+380443900439">+380 44 3900439</a>
+                        </div>
+                        <div class="contacts__city-info contacts__city-info--email">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#email-footer-icon"></use>
+                                </svg>
+                            </i>
+                            <a class="contacts__city-info-email-link" href="mailto:hello@avivi.pro">hello@avivi.pro</a>
+                        </div>
+                    </div>
+                    <div class="contacts__social-links">
+                        <a class="contacts__social-link contacts__social-link--fb" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </i>
+                        </a>
+                        <a class="contacts__social-link contacts__social-link--vk" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </i>
+                        </a>
+                        <a class="contacts__social-link contacts__social-link--google" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#g+"></use>
+                                </svg>
+                            </i>
+                        </a>
+                        <a class="contacts__social-link contacts__social-link--insta" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#insta"></use>
+                                </svg>
+                            </i>
+                        </a>
+                        <a class="contacts__social-link contacts__social-link--youtube" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </i>
+                        </a>
+                        <a class="contacts__social-link contacts__social-link--linkedin" href="#">
+                            <i class="icon">
+                                <svg>
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts__map" id="map"></div>
+            </div>
+            <div class="contacts__photos">
+            <!--cюда ничего лишнего по структуре не ложить! размеры блокам даються через nth-child !-->
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3287.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3513.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3376.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3342.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3504.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3373.jpg" data-object-fit="cover">
+                </div>
+                <div class="contacts__photo-wrapper">
+                    <img src="img/avivioffice/IMG_3507.jpg" data-object-fit="cover">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-line">
+            <div class="bottom-line__left"></div>
+            <div class="bottom-line__right"></div>
+        </div>
+    </section>
+    <script>
+        var revision = 2;    // версия спрайта (текущая дата)
+    </script>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/formstyler.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/develop.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- SCRIPTS -->
+    <script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/validate_script.js" ></script>
+    <!-- build:js -->
+    <script type="text/javascript" src="js/plugins/device.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4iiu69HGNYjeWowMnGtdghML_vNg5M_Y"></script>
+    <script type="text/javascript" src="js/plugins/jquery.fancybox.min.js" ></script>
+    <script type="text/javascript" src="js/plugins/jquery.formstyler.min.js" ></script>
+    <script type="text/javascript" src="js/plugins/jquery.validate.min.js" ></script>
+    <script type="text/javascript" src="js/plugins/maskInput.js" ></script>
+    <script type="text/javascript" src="js/plugins/slick.js" ></script>
+    <script type="text/javascript" src="js/basic_scripts.js" ></script>
+    <script type="text/javascript" src="js/develop.js" ></script>
+    <!-- endbuild -->
+    <!-- /SCRIPTS -->
+</div>
+</body>
+</html>
