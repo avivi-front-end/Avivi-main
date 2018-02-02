@@ -241,7 +241,7 @@ $(window).resize(function() {
 });
 (function(window, document) {
     'use strict';
-    var file = 'img/sprite.svg'; // путь к файлу спрайта на сервере
+    var file = '/img/sprite.svg'; // путь к файлу спрайта на сервере
 
     if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
     var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,

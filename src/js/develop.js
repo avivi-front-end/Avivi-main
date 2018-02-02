@@ -6,7 +6,7 @@ if (!window.console.error) window.console.error = function() {};
 if (!window.console.info) window.console.info = function() {};
 if (!window.console.log) window.console.log = function() {};
 
-$(document).on('ready',function(){
+(function(){
     setTimeout(function() {
         $('select').styler();
       }, 100)
@@ -19,10 +19,28 @@ $(document).on('ready',function(){
           $(this).parent().addClass('active');
       });
     
-      function showClientName(index) {
-    
-      }
-});
+      $('.js-b-slider').slick({
+        slidesToShow: 5,
+        prevArrow: $('.js-b-prev'),
+        nextArrow: $('.js-b-next'),
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 3,
+            },
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+            },
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ] 
+      });
+
+    }());
 var madeSliders = (function(){
     var sliderBig = $('.js-made-slider-b');
     var sliderRight = $('.js-made-slider');
@@ -140,18 +158,17 @@ var showLanguage = (function(){
 	})
 })();
 
-var showVideoPop = (function() {
+var videoPop = (function() {
     var videoBtn = $('.js-show-video');
-    var videoLink = 'https://www.youtube.com/embed/0H6Wk5UaI_U';
     var videoPopWrapper = $('.pop-up-wrapper');
     var videoWrapper = $('.pop-up-video__video-wrapper');
     var popUp = $('.pop-up-video');
     var closePop = $('.js-close-pop');
 
-
     videoBtn.on('click', function(e) {
         e.preventDefault();
-        showPopVideo();
+        var videoLink = $(this).attr('href');
+        showPopVideo(videoLink);
     })
 
     closePop.on('click', function(e) {
@@ -159,10 +176,10 @@ var showVideoPop = (function() {
         closePopVideo();
     })
 
-    function showPopVideo() {
+    function showPopVideo(videoLink) {
         var windowWidth = $(window).outerWidth();
         var windowHeight = $(window).outerHeight();
-        videoPopWrapper.show();
+        videoPopWrapper.addClass('active');
         setTimeout(function() {
             popUp.addClass('active');
         }, 10)
@@ -174,54 +191,42 @@ var showVideoPop = (function() {
     function closePopVideo() {
         popUp.removeClass('active');
         setTimeout(function() {
-            videoPopWrapper.hide();
+            videoPopWrapper.removeClass('active');
             videoWrapper.html('');
         }, 550)
     }
 
+
 })();
 
-$(document).on('click', function(e) {
-    var tempTarget = $(e.target);
-
-    if ($(tempTarget).closest('.js-modal-wrapper').length > 0 || $(tempTarget).closest('.js-show-pop').length > 0 || ($(tempTarget[0]).hasClass('js-show-pop'))) {
-    } else {
-        if ($(tempTarget).closest('.js-show-menu').length > 0 || ($(tempTarget[0]).hasClass('js-show-menu'))) {
-            return false;
-        }
-        modalOpenFn();
-        setTimeout(function() {
-            $('.header__order-main-wrapper').hide().removeClass('active');
-            $('.pop-up-wrapper.hed').removeClass('active');
-            $('html').removeClass('hidden');
-            $('.page-wrapper').removeClass('hidden');
-        }, 305);
-    }
-    function modalOpenFn() {
-        if ($('.js-modal-wrapper').hasClass('active')) {
-            var targetWrappet = $('.js-modal-wrapper.active');
-            targetWrappet.find('.js-modal').removeClass('active');
-            setTimeout(function() {
-                targetWrappet.hide().removeClass('active');
-                if (targetWrappet.hasClass('mob-menu__wrap')) {
-                    $('.js-show-menu').removeClass('active');
-                    $('.pop-up-wrapper').removeClass('active');
-                }
-            }, 350);
-        }
-    }
-});
 var menu = (function() {
     var $menuBtn = $('.js-show-menu');
     var $menuWrapper = $('.mob-menu__wrap');
     var $menu = $('.mob-menu');
     var $menuDopBtn = $('.js-call-dopmenu');
     var $menuDop = $('.mob-menu__dop');
+    var $closeDop = $('.mob-menu__dop-close');
+
+    $(document).on('click touchstart', function () {
+        if (!$menuWrapper.is(event.target) && $menuWrapper.has(event.target).length === 0 && !$menuBtn.is(event.target) && $menuBtn.has(event.target).length === 0)  {
+            $menuBtn.removeClass('active');
+            $menu.removeClass('active');
+            $menuDop.removeClass('open');
+            setTimeout(function() {
+                $menuWrapper.hide().removeClass('active');
+            }, 305);
+        }
+    });
 
     $menuDopBtn.click(function(e){
         e.preventDefault();
-        $menuWrapper.addClass('open');
-        $menuDop.addClass('open');
+        $menuDop.toggleClass('open');
+        $menuWrapper.toggleClass('dop');
+    });
+
+    $closeDop.click(function(e){
+        e.preventDefault();
+        $menuDop.removeClass('open');
     });
 
     $menuBtn.on('click', function(e) {
@@ -236,12 +241,16 @@ var menu = (function() {
             setTimeout(function() {
                 $menuWrapper.hide().removeClass('active');
             }, 305);
+            $menuDop.removeClass('open');
+            $menuWrapper.removeClass('dop');
+
         } else {
             $this.addClass('active');
             $menuWrapper.show().addClass('active');
             setTimeout(function() {
                 $menu.addClass('active');
             }, 10);
+            $menuWrapper.removeClass('dop');
         }
     });
 
@@ -256,10 +265,6 @@ var menu = (function() {
                 }
             }, 350);
         }
-    }
-
-    function closeDopMenu(){
-        $menuWrapper.removeClass('open');
     }
 })();
 
@@ -311,6 +316,12 @@ var order = (function() {
     var $orderWrapper = $('.header__order-main-wrapper');
     var $order = $('.header__order-wrapper');
     var $closeOrder = $('.js-order-close');
+
+    $(document).on('click touchstart',  function () {
+        if (!$orderWrapper.is(event.target) && $orderWrapper.has(event.target).length === 0 && !$orderBtn.is(event.target) && $orderBtn.has(event.target).length === 0)  {
+            console.log('opa opa');
+        }
+    });
 
     $orderBtn.on('click', function(e) {
         e.preventDefault();
@@ -369,12 +380,9 @@ var changeInput = (function(){
     
     $(document).on('click', '.js-remove-item', function(e) {
         e.preventDefault();
-        var $this = $(this);
-        $this.closest('.send-file__item').detach();
-    
+        $(this).parent().detach();
     });
 })();
-
 
 var clientsSlider = (function(){
     var clientsCount = $('.js-bottom-slider .clients__bottom-slide').length - 1;
@@ -404,22 +412,21 @@ var clientsSlider = (function(){
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 1,
+                        centerMode: true,
                         variableWidth: true
                     }
                 }
             ]
         });
-
-        $('.js-clients-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-            // console.log(nextSlide);
-            $('.js-readmore').prev('.clients__bottom-slide-text').removeClass('show-full');
-            if ($(window).width() < 800) {
-                $('.js-readmore').show();
-            }
+        $('.js-bottom-slider').on('beforeChange', function(nextSlide){
+            $('.clients__bottom-slide-text').removeClass('full');
         });
 
         $('.js-readmore').click(function() {
-            $(this).prev('.clients__bottom-slide-text').addClass('show-full');
+            $(this).prev('.clients__bottom-slide-text').addClass('full');
+            $('.js-bottom-slider').slick('slickCurrentSlide', function(){
+                console.log($(this));
+            });
             $(this).hide();
         })
 
@@ -428,8 +435,7 @@ var clientsSlider = (function(){
             speed: 50,
             fade: true,
             arrows: false,
-            pauseOnHover: true,
-            adaptiveHeight: true
+            pauseOnHover: true
         });
 
         $('.clients__bottom-wrapper').mouseover(function() {
@@ -455,151 +461,48 @@ $(document).on('click', '.js-form-subscribe-top', function(e) {
     $(this).parents('.inner-page-head--blog').toggleClass('showsubscribe');
 });
 
-$(document).on('click', '.js-order-form-support-show', function(e) {
+$(document).on('click', '.js-sup-show', function(e) {
     e.preventDefault();
-    $('.js-order-form-support').show();
-    $('.js-order-form-support-hide').hide();
-    return false;
+    $('.js-sup').show();
+    $('.js-sup-hide').hide();
 });
 
-/* 
+(function(window, document) {
+    'use strict';
+    var file = 'img/sprite.svg'; // путь к файлу спрайта на сервере
 
-
-
-
-$(document).on('ready',function(){
-
-    // placeholder
-    //-----------------------------------------------------------------------------
-    $('input[placeholder], textarea[placeholder]').placeholder();
-    $('.js-slider').slick({
-        fade: true,
-        cssEase: 'linear',
-        dots: false,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    // speed: 50,
-                    fade: true,
-                    adaptiveHeight: true
-                    // slidesToShow: 1,
-                    // variableWidth: true
-                }
-            }
-        ]
-    });
-    $('.js-slider-arrow').on('click', function(e) {
-        e.preventDefault();
-        $('.js-slider').slick($(this).attr('data-slider'));
-    });
-
-
-
-    //валидация формы заказа проекта https://jqueryvalidation.org/
-    jQuery.validator.addMethod("lettersonly", function(value, element) {
-        return this.optional(element) || /^[a-z]+$/i.test(value);
-    }, "Letters only please");
-
-
-    $('#orderform').validate({
-        ignore: ".ignore",
-        rules: {
-            name: {
-                required: true
-
-            },
-            phone: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            hiddenRecaptcha: {
-                required: function () {
-                    if (grecaptcha.getResponse() == '') {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            }
+    if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
+    var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
+        request,
+        data,
+        insertIT = function() {
+            document.body.insertAdjacentHTML('afterbegin', data);
         },
-        messages: {
-            name: {
-                required: 'Поле должно быть заполнено'
-            },
-            phone: {
-                required: 'Поле должно быть заполнено',
-                digits: 'Только цифры'
-            },
-            email: {
-                required: 'Поле должно быть заполнено',
-                email: 'Проверьте правильность вашего email'
+        insert = function() {
+            if (document.body) insertIT();
+            else document.addEventListener('DOMContentLoaded', insertIT);
+        };
+    if (isLocalStorage && localStorage.getItem('inlineSVGrev') == revision) {
+        data = localStorage.getItem('inlineSVGdata');
+        if (data) {
+            insert();
+            return true;
+        }
+    }
+    try {
+        request = new XMLHttpRequest();
+        request.open('GET', file, true);
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                data = request.responseText;
+                insert();
+                if (isLocalStorage) {
+                    localStorage.setItem('inlineSVGdata', data);
+                    localStorage.setItem('inlineSVGrev', revision);
+                }
+
             }
         }
-    });
-
-    $('#consultform').validate({
-        rules: {
-            name: {
-                required: true
-            },
-            phone: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            name: {
-                required: 'Поле должно быть заполнено',
-
-            },
-            phone: {
-                required: 'Поле должно быть заполнено',
-                digits: 'Только цифры'
-            },
-            email: {
-                required: 'Поле должно быть заполнено',
-                email: 'Проверьте правильность вашего email'
-            }
-        }
-    });
-    $('#consultformtop').validate({
-        rules: {
-            name: {
-                required: true,
-
-            },
-            phone: {
-                required: true,
-            },
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            name: {
-                required: 'Поле должно быть заполнено',
-
-            },
-            phone: {
-                required: 'Поле должно быть заполнено'
-            },
-            email: {
-                required: 'Поле должно быть заполнено',
-                email: 'Проверьте правильность вашего email'
-            }
-        },
-    });
-    //language tab show
-    
-});
-
- */
+        request.send();
+    } catch (e) {}
+}(window, document));
