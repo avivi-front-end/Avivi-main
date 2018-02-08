@@ -237,6 +237,25 @@
       justify-content: center; } }
 
 @media (max-width: 992px) {
+  .blog__main-photo {
+    height: 200px; }
+  .bitrix-int__top {
+    padding: 10px 0 15px; }
+  .bitrix1c-about {
+    padding-bottom: 156px;
+    -moz-background-size: 500px;
+    background-size: 500px; }
+  .browser {
+    background: transparent url(../img/design/browser-bg-800.jpg) center top no-repeat;
+    width: 751px;
+    padding: 51px 13px 0 1px;
+    height: 436px;
+    margin-top: 47px; }
+    .browser__inner {
+      width: 737px;
+      height: 414px; }
+    .browser .twentytwenty-handle:after {
+      top: 42%; }
   .support-info__form, .support__col--right {
     padding-left: 11px;
     padding-right: 0; }
@@ -330,6 +349,71 @@
       left: 0; } }
 
 @media (max-width: 860px) {
+  .pagination {
+    padding: 35px 0px 40px; }
+  .blog__wrap {
+    padding-top: 0; }
+  .blog__item-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 15px; }
+  .blog__item:not(:last-child) {
+    margin-bottom: 25px; }
+  .blog__title {
+    width: 100%; }
+  .blog-user {
+    width: 100%;
+    padding-right: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .blog-user__img {
+      margin-left: 15px; }
+    .blog-user__left {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -moz-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .blog-user__name {
+      line-height: 16px;
+      margin-bottom: 0; }
+    .blog-user__date {
+      padding-bottom: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  .blog__text {
+    padding: 20px 0px 5px; }
+  .blog__social {
+    padding-left: 0; }
   .support__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -372,6 +456,104 @@
     padding: 20px 0 60px; } }
 
 @media (max-width: 778px) {
+  .create-top__item {
+    width: 50%;
+    margin-bottom: 10px; }
+  .site-card-list {
+    padding: 0px 0 40px; }
+    .site-card-list li {
+      width: 100%; }
+  .img-text__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .img-text__img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px; }
+  .img-text--big-img .img-text__img {
+    width: 100%;
+    padding: 0 20px; }
+  .bitrix1c-about__title, .bitrix1c-about__text {
+    font-size: 15px;
+    line-height: 25px; }
+  .bitrix1c-about {
+    padding: 10px 0 100px;
+    -moz-background-size: 270px;
+    background-size: 270px; }
+  .bitrix1c__wrap {
+    padding-left: 0; }
+  .bitrix1c__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .bitrix1c__icon {
+    margin-bottom: 30px;
+    margin-left: 30px; }
+  .bitrix1c__text {
+    padding: 0 30px; }
+  .bitrix1c-totals {
+    padding-bottom: 10px; }
+    .bitrix1c-totals__wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .bitrix1c-totals__col {
+      width: 100%;
+      margin: 0 0 35px; }
+  .vacancy__img {
+    height: 150px; }
+  .vacancy__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .vacancy__salary {
+    text-align: left;
+    margin-bottom: 20px; }
+  .design__opp {
+    padding-bottom: 20px; }
+  .design-banner {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .design-banner__col {
+      width: 50%;
+      margin-bottom: 20px; }
+  .design__opp-mob-title {
+    display: none; }
+  .browser {
+    display: none; }
   .support__item {
     padding-left: 167px;
     padding-right: 0; }
@@ -451,6 +633,8 @@
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 28px; }
+    .first-screen__title--underline {
+      margin-bottom: 50px; }
   .about__top {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -488,6 +672,47 @@
     height: 262px; } }
 
 @media (max-width: 600px) {
+  .audit-bottom {
+    padding: 40px 0 30px; }
+    .audit-bottom p br {
+      display: none; }
+  .bitrix-int__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .bitrix-int__item:not(:last-child) {
+      margin-bottom: 15px; }
+  .bitrix-int__wrap {
+    padding-left: 0; }
+  .bitrix-int__text {
+    padding-left: 0;
+    text-align: center; }
+    .bitrix-int__text h4 {
+      text-align: center; }
+  .bitrix-int__icon {
+    margin-bottom: 20px; }
+  .bitrix-int__btn-wrap {
+    padding: 32px 0 0; }
+  .consult__bottom {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .consult__bottom .send-file {
+      margin-top: 20px; }
   .support-info-man__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -608,6 +833,15 @@
       margin: 0 auto; } }
 
 @media (max-width: 500px) {
+  .create-top__item {
+    width: 100%; }
+  .vacancy {
+    margin-bottom: 30px; }
+    .vacancy__salary {
+      font-size: 20px; }
+    .vacancy__title {
+      font-size: 23px;
+      line-height: 26px; }
   .section-title {
     font-size: 28px;
     margin-bottom: 45px; }
@@ -672,6 +906,20 @@
     margin-bottom: 20px; } }
 
 @media (max-width: 480px) {
+  .img-text__title {
+    font-size: 23px;
+    line-height: 26px; }
+  .img-text--big-img .img-text__img {
+    padding: 0; }
+  .img-text--big-img .img-text__text {
+    padding-left: 0; }
+  .blog__title {
+    line-height: 23px;
+    font-size: 24px; }
+  .bitrix1c__text {
+    padding: 0; }
+  .bitrix1c__icon {
+    margin-left: 0; }
   .support__item {
     padding-left: 100px; }
     .support__item-title {
@@ -724,6 +972,8 @@
       align-items: center; }
     .contacts-main__social-btn {
       margin-bottom: 10px; }
+  .consult--carrer .consult__col {
+    width: 100%; }
   .consult__right {
     padding-top: 44px; }
     .consult__right .btn {

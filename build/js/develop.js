@@ -7,6 +7,10 @@ if (!window.console.info) window.console.info = function() {};
 if (!window.console.log) window.console.log = function() {};
 
 (function(){
+    $(".twentytwenty-in").twentytwenty({
+        default_offset_pct: 0.7
+    });
+
     setTimeout(function() {
         $('select').styler();
       }, 100)
@@ -191,8 +195,7 @@ var videoPop = (function() {
     function closePopVideo() {
         popUp.removeClass('active');
         setTimeout(function() {
-            videoPopWrapper.removeClass('active');
-            videoWrapper.html('');
+            videoPopWrapper.removeClass('active').html('');
         }, 550)
     }
 

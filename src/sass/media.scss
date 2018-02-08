@@ -198,6 +198,36 @@
     }
 }
 @media(max-width: 992px){
+    .blog{
+        &__main{
+            &-photo{
+                height: 200px;
+            }
+        }
+    }
+    .bitrix-int__top{
+        padding: 10px 0 15px;
+    }
+    .bitrix1c{
+        &-about{
+            padding-bottom: 156px;
+            background-size: 500px;
+        }
+    }
+    .browser{
+        background: transparent url(../img/design/browser-bg-800.jpg) center top no-repeat;
+        width: 751px;
+        padding: 51px 13px 0 1px;
+        height: 436px;
+        margin-top: 47px;
+        &__inner{
+            width: 737px;
+            height: 414px;
+        }
+        .twentytwenty-handle:after{
+            top: 42%;
+        }
+    }
     .support-info__form, .support__col--right{
         padding-left: 11px;
         padding-right: 0;
@@ -295,10 +325,34 @@
     }
 }
 @media (max-width: 860px){
-    .support{
-        &__row{
-            flex-direction: column;
+    .pagination{padding: 35px 0px 40px;}
+    .blog{
+        &__wrap{padding-top: 0;}
+        &__item{
+            &-top{ flex-direction: column; align-items: flex-start; margin-bottom: 15px;}
+            &:not(:last-child){margin-bottom: 25px;}
         }
+        &__title{width: 100%;}
+        &-user{
+            width: 100%;
+            padding-right: 0;
+            justify-content: space-between;
+            &__img{margin-left: 15px;}
+            &__left{
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__name{line-height: 16px; margin-bottom: 0;}
+            &__date{padding-bottom: 0; flex-shrink: 0;}
+        }
+        &__text{padding: 20px 0px 5px;}
+        &__social{padding-left: 0;}
+
+    }
+    .support{
+        &__row{ flex-direction: column;}
         &__col--right{
             width: 100%;
             border-left: none;
@@ -306,14 +360,9 @@
             max-width: 400px;
             margin: 0 auto;
         }
-        &__overtime{
-            padding-left: 0;
-            margin-top: 111px;
-        }
+        &__overtime{ padding-left: 0; margin-top: 111px;}
         &-info{
-             &__form{
-                 padding-left: 0;
-             }
+             &__form{ padding-left: 0;}
         }
     }
     .header{
@@ -325,6 +374,70 @@
     .first-screen{min-height: 200px; padding: 20px 0 60px;}
 }
 @media (max-width: 778px){
+    .create-top__item{width: 50%; margin-bottom: 10px;}
+    .site-card{
+        &-list{ padding: 0px 0 40px;
+            li{width: 100%;}
+        }
+    }
+    .img-text{
+        &__wrap{flex-direction: column;}
+        &__img{ width: 100%; text-align: center; margin-bottom: 30px;}
+        &--big-img{
+            .img-text{
+                &__img{width: 100%; padding: 0 20px;}
+            }
+        }
+    }
+    .bitrix1c-about__title, .bitrix1c-about__text{ font-size: 15px; line-height: 25px;}
+    .bitrix1c{
+        &-about{ padding: 10px 0 100px; background-size: 270px;}
+        &__wrap{padding-left: 0;}
+        &__item{ flex-direction: column; align-items: flex-start;}
+        &__icon{ margin-bottom: 30px; margin-left: 30px;}
+        &__text{padding: 0 30px;}
+        &-totals{padding-bottom: 10px;
+            &__wrap{
+                flex-direction: column;
+                align-items: center;
+            }
+            &__col{
+                width: 100%;
+                margin: 0 0 35px;
+            }
+        }
+    }
+    .vacancy{
+        &__img{
+            height: 150px;
+        }
+        &__top{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        &__salary{
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    }
+    .design{
+        &__opp{
+            padding-bottom: 20px;
+        }
+        &-banner{
+            flex-wrap: wrap;
+            &__col{
+                width: 50%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .design__opp-mob-title{
+        display: none;
+    }
+    .browser{
+        display: none;
+    }
     .support{
         &__item{
             padding-left: 167px;
@@ -417,7 +530,9 @@
     }
     .mob-menu{padding-left: 45px;}
     .first-screen{
-        &__title{font-size: 30px; line-height: 36px; margin-bottom: 28px;}
+        &__title{font-size: 30px; line-height: 36px; margin-bottom: 28px;
+            &--underline{margin-bottom: 50px;}
+        }
     }
     .about{
         &__top{flex-wrap: wrap; justify-content: center;}
@@ -438,6 +553,31 @@
     }
 }
 @media (max-width: 600px){
+    .audit{
+        &-bottom{padding: 40px 0 30px;
+            p{
+                br{display: none;}
+            }
+        }
+    }
+    .bitrix{
+        &-int{
+            &__item{ flex-direction: column; align-items: center;
+                &:not(:last-child){ margin-bottom: 15px;}
+            }
+            &__wrap{padding-left: 0;}
+            &__text{ padding-left: 0; text-align: center;
+                h4{text-align: center;}
+            }
+            &__icon{ margin-bottom: 20px;}
+            &__btn-wrap{padding: 32px 0 0;}
+        }
+    }
+    .consult{
+        &__bottom{ margin-top: 0; flex-direction: column;
+            .send-file{margin-top: 20px;}
+        }
+    }
     .support{
         &-info-man{
             &__item{
@@ -544,6 +684,17 @@
     }
 }
 @media(max-width: 500px){
+    .create-top__item{width: 100%;}
+    .vacancy{
+        margin-bottom: 30px;
+        &__salary{
+            font-size: 20px;
+        }
+        &__title{
+            font-size: 23px;
+            line-height: 26px;
+        }
+    }
     .section-title{
         font-size: 28px;
         margin-bottom: 45px;
@@ -609,6 +760,26 @@
     .send-file{margin-bottom: 20px;}
 }
 @media (max-width: 480px){
+    .img-text{
+        &__title{font-size: 23px; line-height: 26px;}
+        &--big-img{
+            .img-text{
+                &__img{padding: 0;}
+                &__text{padding-left: 0;}
+            }
+        }
+    }
+    .blog{
+        &__title{ line-height: 23px; font-size: 24px;}
+    }
+    .bitrix1c{
+        &__text{
+            padding: 0;
+        }
+        &__icon{
+            margin-left: 0;
+        }
+    }
     .support{
         &__item{
             padding-left: 100px;
@@ -675,6 +846,13 @@
         }
     }
     .consult{
+        &--carrer{
+            .consult{
+                &__col{
+                    width: 100%;
+                }
+            }
+        }
         &__right{
             padding-top: 44px;
             .btn{margin-top: 26px;}
