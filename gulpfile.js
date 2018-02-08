@@ -143,6 +143,14 @@ gulp.task('clean_css', function () {
         .pipe(clean());
 });
 
+gulp.task('scripts', function() {
+	return gulp.src(['src/js/jquery-3.2.1.min.js','src/js/libs/*.js'])
+	  .pipe(concat('libs.js'))
+	  .pipe(uglify())
+	  .pipe(gulp.dest('src/js'))
+	  .pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('prod_css',['clean_css'],function() {
 
     return gulp.src(path.src.style)
@@ -200,6 +208,6 @@ gulp.task('js_min', function(){
 
 // /minify functions
 
-gulp.task('default', ['build', 'webserver', 'watch']);
-gulp.task('minify', ['css_min', 'js_min']);
-gulp.task('prod', [ 'clean_css','prod_css', 'prod_js', 'clean_js', 'prod_html', 'webserver']);
+gulp.task('default', ['build', 'webserver', 'watch', 'scripts']);
+gulp.task('minify', ['css_min', 'js_min', 'scripts']);
+gulp.task('prod', [ 'clean_css','prod_css', 'prod_js', 'clean_js', 'prod_html', 'webserver', 'scripts']);

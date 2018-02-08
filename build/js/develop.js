@@ -11,6 +11,8 @@ if (!window.console.log) window.console.log = function() {};
         default_offset_pct: 0.7
     });
 
+    $('.tel-mask').mask('+9 (999) 999-99-99 ');
+
     setTimeout(function() {
         $('select').styler();
       }, 100)
@@ -199,6 +201,41 @@ var videoPop = (function() {
         }, 550)
     }
 
+})();
+
+var popUpMini = (function() {
+    var btn = $('.js-pop-mini-open');
+    var popup = $('.js-pop-mini')
+    var page = $('.page-wrapper');
+    var closePop = $('.js-close-pop');
+    var html = $('html');
+    var overlay = $('.overlay');
+
+  
+    btn.on('click', function(e) {
+		e.preventDefault();
+		popup.addClass('active');
+		page.addClass('hidden');
+		html.addClass('hidden');
+		overlay.addClass('active');
+    })
+
+    closePop.on('click', function(e) {
+        e.preventDefault();
+        closePopVideo();
+    })
+
+    overlay.on('click', function(e) {
+        e.preventDefault();
+        closePopVideo();
+    })
+
+    function closePopVideo() {
+        popup.removeClass('active');
+        page.removeClass('hidden');
+        html.removeClass('hidden');
+        overlay.removeClass('active');
+    }
 
 })();
 
@@ -469,43 +506,3 @@ $(document).on('click', '.js-sup-show', function(e) {
     $('.js-sup').show();
     $('.js-sup-hide').hide();
 });
-
-(function(window, document) {
-    'use strict';
-    var file = 'img/sprite.svg'; // путь к файлу спрайта на сервере
-
-    if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
-    var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
-        request,
-        data,
-        insertIT = function() {
-            document.body.insertAdjacentHTML('afterbegin', data);
-        },
-        insert = function() {
-            if (document.body) insertIT();
-            else document.addEventListener('DOMContentLoaded', insertIT);
-        };
-    if (isLocalStorage && localStorage.getItem('inlineSVGrev') == revision) {
-        data = localStorage.getItem('inlineSVGdata');
-        if (data) {
-            insert();
-            return true;
-        }
-    }
-    try {
-        request = new XMLHttpRequest();
-        request.open('GET', file, true);
-        request.onload = function() {
-            if (request.status >= 200 && request.status < 400) {
-                data = request.responseText;
-                insert();
-                if (isLocalStorage) {
-                    localStorage.setItem('inlineSVGdata', data);
-                    localStorage.setItem('inlineSVGrev', revision);
-                }
-
-            }
-        }
-        request.send();
-    } catch (e) {}
-}(window, document));

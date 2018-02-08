@@ -35,6 +35,12 @@ $grey: #4b586d;
 @import '_header_support';
 @import '_main';
 @import '_footer';
+@import '_fancybox';
+@import '_formstyler';
+@import '_normalize';
+@import '_slick-theme';
+@import '_slick';
+@import '_twentytwenty';
 h4{
     margin: 0 0 13px;
     text-align: center;
@@ -279,7 +285,7 @@ h4{
                 color: #d5213b;
             }
         }
-        &-btn{@include position(absolute, 54%, null, null, 134px); transform: translateY(-50%); z-index: 105; display: block;
+        &-btn{@include position(absolute, 54%, null, null, 134px); transform: translateY(-50%); z-index: 85; display: block;
             svg{ fill: #4b586d; width: 44px; height: 44px;
             }
             .open{display: inline-block;
@@ -3162,5 +3168,53 @@ h4{
         &__title{margin-bottom: 70px;}
         &__btn-wrap{text-align: center;}
         .cols__item{margin-bottom: 28px;}
+    }
+}
+.create-pop{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    background: #fff;
+    padding: 30px 5%;
+    max-width: 615px;
+    width: 100%;
+    transform: translate(-50%, -200%);
+    &.active{
+        transform: translate(-50%, -50%);
+    }
+    &__close{@include position (absolute, 30px, 30px);
+        &:hover{
+            svg{ fill: #d5213b; transition: fill 0.3s ease;}
+        }
+        .icon{ display: block;}
+        svg{width: 45px; height: 45px; fill: #4b586d; transition: fill 0.3s ease;}
+    }
+    &__btn-wrap{text-align: center; margin-top: 35px;}
+    &__select{width: 290px;
+        &-row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 38px;
+            label{
+                font-size: 15px;
+                font-family: $robotoslabbold;
+                color: #4b586d;
+                padding-right: 10px;
+            }
+        }
+        .jq-selectbox{width: 100%;}
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        text-align: center;
+        font-family: $robotoslabbold;
+        font-size: 48px;
+        color: #4b586d;
+        margin-bottom: 17px;
     }
 }

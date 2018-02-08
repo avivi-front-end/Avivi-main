@@ -33,7 +33,7 @@
                         <input type="text" name="email" required="required" placeholder="Ваш e-mail" class="header__order-form-input">
                     </div>
                     <div class="header__order-form-group">
-                        <input type="number" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input">
+                        <input type="text" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
                     </div>
                     <div class="header__order-form-group">
                         <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
@@ -52,5 +52,48 @@
                 <button type="submit" class="btn">Отправить заявку</button>
             </div>
         </div>
+    </div>
+</div>
+<div class="create-pop js-pop-mini">
+    <a href="#" class="create-pop__close js-close-pop">
+        <i class="icon">
+            <svg>
+                <use xlink:href="#close-icon"></use>
+            </svg>
+        </i>
+    </a>
+    <div class="create-pop__inner">
+        <div class="create-pop__title">Сделать заказ</div>
+        <form class="create-pop__form">
+            <div class="create-pop__top">
+                <div class="create-pop__select-row">
+                    <label>Заказать:</label>
+                    <div class="create-pop__select">
+                        <select data-smart-positioning="false">
+                            <option value="Готовый интернет-магазин">Готовый интернет-магазин</option>
+                            <option value="Простой интернет-магазин">Простой интернет-магазин</option>
+                            <option value="Высоконагруженый интернет-магазин">Высоконагруженый интернет-магазин</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="header__order-form">
+                <div class="header__order-form-group">
+                    <input type="text" name="name" required="required" placeholder="Ваше имя" class="header__order-form-input">
+                </div>
+                <div class="header__order-form-group">
+                    <input type="text" name="email" required="required" placeholder="Ваш e-mail" class="header__order-form-input">
+                </div>
+                <div class="header__order-form-group">
+                    <input type="text" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
+                </div>
+                <div class="header__order-form-group">
+                    <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
+                </div>
+            </div>
+            <div class="create-pop__btn-wrap">
+                <button type="submit" class="btn">Отправить заявку</button>
+            </div>
+        </form>
     </div>
 </div>
