@@ -11,6 +11,8 @@ if (!window.console.log) window.console.log = function() {};
         default_offset_pct: 0.7
     });
 
+    $('.js-sameHeight').matchHeight();
+
     $('.tel-mask').mask('+9 (999) 999-99-99 ');
 
     setTimeout(function() {
@@ -147,8 +149,6 @@ var contacts = (function() {
     }
     // по умолчанию показываем киев
 })();
-
-//Стилизация карты выше
 var showLanguage = (function(){
     $('.js-show-language').on('click', function() {
         var $this = $(this);
@@ -163,7 +163,6 @@ var showLanguage = (function(){
 		}
 	})
 })();
-
 var videoPop = (function() {
     var videoBtn = $('.js-show-video');
     var videoPopWrapper = $('.pop-up-wrapper');
@@ -197,7 +196,8 @@ var videoPop = (function() {
     function closePopVideo() {
         popUp.removeClass('active');
         setTimeout(function() {
-            videoPopWrapper.removeClass('active').html('');
+            videoPopWrapper.removeClass('active')
+            videoWrapper.html('');
         }, 550)
     }
 
@@ -206,33 +206,30 @@ var videoPop = (function() {
 var popUpMini = (function() {
     var btn = $('.js-pop-mini-open');
     var popup = $('.js-pop-mini')
-    var page = $('.page-wrapper');
-    var closePop = $('.js-close-pop');
+    var closePop = $('.js-close-mini');
     var html = $('html');
     var overlay = $('.overlay');
 
   
-    btn.on('click', function(e) {
+    btn.click(function(e) {
 		e.preventDefault();
 		popup.addClass('active');
-		page.addClass('hidden');
 		html.addClass('hidden');
 		overlay.addClass('active');
     })
 
-    closePop.on('click', function(e) {
+    closePop.click(function(e) {
         e.preventDefault();
-        closePopVideo();
+        close();
     })
 
-    overlay.on('click', function(e) {
+    overlay.click(function(e) {
         e.preventDefault();
-        closePopVideo();
+        close();
     })
 
-    function closePopVideo() {
+    function close() {
         popup.removeClass('active');
-        page.removeClass('hidden');
         html.removeClass('hidden');
         overlay.removeClass('active');
     }
