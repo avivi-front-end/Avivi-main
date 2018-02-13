@@ -2808,12 +2808,17 @@ h4 {
   position: relative; }
 
 .send-file__label {
-  white-space: nowrap;
-  cursor: pointer;
-  position: relative;
-  padding-left: 37px;
-  width: 97%;
-  display: block; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
   .send-file__label:hover .send-file__icon {
     background: #3bab51;
     -webkit-transition: 0.3s ease;
@@ -2822,15 +2827,11 @@ h4 {
     transition: 0.3s ease; }
 
 .send-file__icon {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: block;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
+  margin-right: 12px;
   width: 24px;
   height: 24px;
   background: #4b586d;
@@ -2936,6 +2937,21 @@ h4 {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .header-tnx {
+    text-align: center;
+    padding: 100px 0 0; }
+    .header-tnx__title {
+      font-family: "RobotoSlabBold", Arial, sans-serif;
+      color: #4b586d;
+      font-size: 30px;
+      margin-bottom: 17px; }
+      .header-tnx__title span {
+        font-size: 48px; }
+    .header-tnx__text p {
+      font-family: "RobotoRegular", Arial, sans-serif;
+      font-size: 15px;
+      color: #4b586d;
+      line-height: 1.2; }
   .header__main {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3252,11 +3268,11 @@ h4 {
     border: 1px solid #4b586d;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    border-radius: 15px; }
-  .header__order-file-name {
-    font-size: 12px;
-    position: relative; }
+    border-radius: 15px;
+    overflow: hidden; }
   .header__order-file-item {
+    font-size: 12px;
+    position: relative;
     margin-bottom: 11px;
     color: #3bab51;
     position: relative;
@@ -3379,14 +3395,28 @@ h4 {
     -moz-border-radius: 0;
     border-radius: 0;
     padding: 0 22px; }
-    .header__order-form-input.error::-webkit-input-placeholder {
-      color: #d5213b; }
-    .header__order-form-input.error::-moz-placeholder {
-      color: #d5213b; }
-    .header__order-form-input.error:-moz-placeholder {
-      color: #d5213b; }
-    .header__order-form-input.error:-ms-input-placeholder {
-      color: #d5213b; }
+    .header__order-form-input.error {
+      border-color: #d5213b; }
+      .header__order-form-input.error::-webkit-input-placeholder {
+        color: #d5213b; }
+      .header__order-form-input.error::-moz-placeholder {
+        color: #d5213b; }
+      .header__order-form-input.error:-moz-placeholder {
+        color: #d5213b; }
+      .header__order-form-input.error:-ms-input-placeholder {
+        color: #d5213b; }
+      .header__order-form-input.error ~ label.error {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 8px;
+        bottom: 12px;
+        display: inline-block;
+        background: url(../img/no_field.svg) no-repeat;
+        text-indent: -99999px; }
+    .header__order-form-input.valid {
+      border-color: #159e31;
+      color: #4b586d; }
     .header__order-form-input::-webkit-input-placeholder {
       font-family: "RobotoRegular", Arial, sans-serif;
       font-size: 15px;
@@ -4611,6 +4641,14 @@ h4 {
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px; }
+      .consult__col input.error, .consult__col textarea.error {
+        -webkit-box-shadow: 0px 1px 0px 0px #d5213b;
+        -moz-box-shadow: 0px 1px 0px 0px #d5213b;
+        box-shadow: 0px 1px 0px 0px #d5213b; }
+      .consult__col input.valid, .consult__col textarea.valid {
+        -webkit-box-shadow: 0px 1px 0px 0px #159e31;
+        -moz-box-shadow: 0px 1px 0px 0px #159e31;
+        box-shadow: 0px 1px 0px 0px #159e31; }
       .consult__col input::-webkit-input-placeholder, .consult__col textarea::-webkit-input-placeholder {
         font-family: "RobotoRegular", Arial, sans-serif;
         color: rgba(255, 255, 255, 0.5); }

@@ -220,38 +220,40 @@
                     </svg>
                 </i>
             </a>
-            <div class="header__order-title">Заказать проект</div>
-            <div class="header__order-text">
-                Оставьте заявку для получения коммерческого предложения. <br>
-                Заполните форму и мы вышлем Вам предложение в котором решим, <br>
-                чем можем вам помочь.
-            </div>
-            <form>
-                <div class="header__order-form">
-                    <div class="header__order-form-group">
-                        <input type="text" name="name" required="required" placeholder="Ваше имя" class="header__order-form-input">
-                    </div>
-                    <div class="header__order-form-group">
-                        <input type="text" name="email" required="required" placeholder="Ваш e-mail" class="header__order-form-input">
-                    </div>
-                    <div class="header__order-form-group">
-                        <input type="text" name="phone" required="required" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
-                    </div>
-                    <div class="header__order-form-group">
-                        <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
-                    </div>
+            <div class="header-right-menu">
+                <div class="header__order-title">Заказать проект</div>
+                <div class="header__order-text">
+                    Оставьте заявку для получения коммерческого предложения. <br>
+                    Заполните форму и мы вышлем Вам предложение в котором решим, <br>
+                    чем можем вам помочь.
                 </div>
-            </form>
-            <div class="header__order-bot">
-                <div class="send-file">
-                    <div class="send-file__name"></div>
-                    <label class="send-file__label">
-                        <span class="send-file__icon"></span>
-                        <input class="js-input-file send-file__input" name="user_file" type="file">
-                        <span class="send-file__text">Вы можете прикрепить файл</span>
-                    </label>
-                </div>
-                <button type="submit" class="btn">Отправить заявку</button>
+                <form class="header-form" get="POST">
+                    <div class="header__order-form">
+                        <div class="header__order-form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" class="header__order-form-input">
+                        </div>
+                        <div class="header__order-form-group">
+                            <input type="text" name="email" placeholder="Ваш e-mail" class="header__order-form-input">
+                        </div>
+                        <div class="header__order-form-group">
+                            <input type="text" name="phone" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
+                        </div>
+                        <div class="header__order-form-group">
+                            <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="header__order-bot">
+                        <div class="send-file">
+                            <div class="send-file__name"></div>
+                            <label class="send-file__label">
+                                <span class="send-file__icon"></span>
+                                <input class="js-input-file send-file__input" name="user_file" type="file">
+                                <span class="send-file__text">Вы можете прикрепить файл</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -809,16 +811,16 @@
             <div class="consult__mob-title">Мы свяжемся с вами <span>в течении 10 минут</span></div>
             <form class="consult__form">
                 <div class="consult__col">
-                    <input type="text" placeholder="ФИО" required="required">
+                    <input type="text" placeholder="ФИО" name="name">
                 </div>
                 <div class="consult__col">
-                    <input type="text" placeholder="Телефон" required="required">
+                    <input type="text" class="tel-mask" placeholder="Телефон" name="phone">
                 </div>
                 <div class="consult__col">
-                    <input type="text" placeholder="Почта" required="required">
+                    <input type="text" placeholder="Почта" name="email">
                 </div>
                 <div class="consult__col">
-                    <textarea type="text" placeholder="Сообщение" required="required"></textarea>
+                    <textarea type="text" placeholder="Сообщение" name="text"></textarea>
                 </div>
                 <button class="btn btn--green">Отправить</button>
             </form>

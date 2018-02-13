@@ -196,7 +196,7 @@ h4{
         }
     }
     &__name{ font-size: 12px; position: relative;}
-    &__label{white-space: nowrap; cursor: pointer; position: relative; padding-left: 37px; width: 97%; display: block;
+    &__label{ display: flex; align-items: center; cursor: pointer;
         &:hover{
             .send-file__icon{
                 background: #3bab51;
@@ -205,11 +205,9 @@ h4{
         }
     }
     &__icon{
+        flex-shrink: 0;
         display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
+        margin-right: 12px;
         width: 24px;
         height: 24px;
         background: #4b586d;
@@ -273,6 +271,23 @@ h4{
     }
 }
 .header{ position: relative; padding: 17px 0 27px; display: flex; align-items: center;
+    &-tnx{text-align: center; padding: 100px 0 0;
+        &__title{
+            font-family: $robotoslabbold;
+            color: #4b586d;
+            font-size: 30px;
+            margin-bottom: 17px;
+            span{ font-size: 48px;}
+        }
+        &__text{
+            p{
+                font-family: $robotoreg;
+                font-size: 15px;
+                color: #4b586d;
+                line-height: 1.2;
+            }
+        }
+    }
     &__main{display: flex; align-items: flex-start;} 
     &__menu {list-style-type: none; margin: 25px 43px 0 39px; display: flex;
         &-item {
@@ -521,11 +536,9 @@ h4{
         }
         &-text { font-family: $robotoreg; font-size: 15px; color: #4b586d; line-height: (18/15); margin-bottom: 37px;
         }
-        &-form { position: relative; border: 1px solid #4b586d; border-radius: 15px;
+        &-form { position: relative; border: 1px solid #4b586d; border-radius: 15px; overflow: hidden;
         }
-        &-file-name { font-size: 12px; position: relative;
-        }
-        &-file-item { margin-bottom: 11px; color: #3bab51; position: relative; padding-left: 37px;
+        &-file-item {font-size: 12px; position: relative; margin-bottom: 11px; color: #3bab51; position: relative; padding-left: 37px;
             &:not(:last-child){margin-bottom: 15px;}
         }
         &-remove { display: block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 24px; height: 24px; border: 1px solid #4b586d; border-radius: 50%; text-decoration: none; transition: 0.3s ease;
@@ -594,11 +607,23 @@ h4{
                 padding: 0 22px;
         
                 &.error {
+                    border-color: #d5213b;
                     &::-webkit-input-placeholder {color: #d5213b;}
                     &::-moz-placeholder {color: #d5213b;}
                     &:-moz-placeholder {color: #d5213b;}
                     &:-ms-input-placeholder {color: #d5213b;}
+                    & ~ label.error{
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        right: 8px;
+                        bottom: 12px;
+                        display: inline-block;
+                        background: url(../img/no_field.svg) no-repeat;
+                        text-indent: -99999px;
+                    }
                 }
+                &.valid{border-color: #159e31; color:#4b586d}
                 &::-webkit-input-placeholder {font-family: $robotoreg;font-size: 15px;color: #4b586d;}
                 &::-moz-placeholder {font-family: $robotoreg; font-size: 15px; color: #4b586d;}
                 &:-moz-placeholder { font-family: $robotoreg; font-size: 15px; color: #4b586d;
@@ -1177,11 +1202,8 @@ h4{
 }
 .consult{display: flex; position: relative;
     &--carrer{
-        .consult__col{
-            width: 50%;
-            &:nth-child(5){
-                width: 100%;
-            }
+        .consult__col{width: 50%;
+            &:nth-child(5){width: 100%;}
         }
     }
     &__title{
@@ -1283,6 +1305,12 @@ h4{
         input{height: 45px; padding: 0 20px;}
         textarea{height: 98px; resize: none; padding: 10px 20px;}
         input, textarea{width: 100%; font-size: 13px; font-family: $robotoreg; color: #fff; box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1); background: rgba(0, 0, 0, .2); border: none; border-radius: 5px;
+            &.error{
+                box-shadow: 0px 1px 0px 0px #d5213b;
+            }
+            &.valid{
+                box-shadow: 0px 1px 0px 0px #159e31;
+            }
             &::-webkit-input-placeholder {font-family: $robotoreg; color: rgba(255, 255, 255, .5);}
             &::-moz-placeholder {font-family: $robotoreg; color: rgba(255, 255, 255, .5);}
             &:-moz-placeholder {font-family: $robotoreg; color: rgba(255, 255, 255, .5);}
@@ -2056,8 +2084,6 @@ h4{
             max-width: 870px;
             display: inline-block;
         }
-    }
-    &-how{
     }
 }
 .table{

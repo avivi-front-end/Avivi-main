@@ -201,8 +201,7 @@ var videoPop = (function() {
         }, 550)
     }
 
-})();
-
+})(); 
 var popUpMini = (function() {
     var btn = $('.js-pop-mini-open');
     var popup = $('.js-pop-mini')
@@ -354,11 +353,13 @@ var order = (function() {
     var $order = $('.header__order-wrapper');
     var $closeOrder = $('.js-order-close');
 
-    $(document).on('click touchstart',  function () {
-        if (!$orderWrapper.is(event.target) && $orderWrapper.has(event.target).length === 0 && !$orderBtn.is(event.target) && $orderBtn.has(event.target).length === 0)  {
-            console.log('opa opa');
-        }
-    });
+        $(document).on('click touchstart',  function (event) {
+            if (!$orderWrapper.is(event.target) && $orderWrapper.has(event.target).length === 0 && !$orderBtn.is(event.target) && $orderBtn.has(event.target).length === 0 && !$('.ignore').is(event.target) && $('.ignore').has(event.target).length === 0){
+                if($order.hasClass('active')){
+                    closeOrder();
+                }
+            }
+        });
 
     $orderBtn.on('click', function(e) {
         e.preventDefault();
@@ -385,13 +386,7 @@ var order = (function() {
 
     $closeOrder.on('click', function(e) {
         e.preventDefault();
-        $order.removeClass('active');
-        setTimeout(function() {
-            $orderWrapper.hide().removeClass('active');
-            $('.pop-up-wrapper.hed').removeClass('active');
-            $html.removeClass('hidden');
-            $('.page-wrapper').removeClass('hidden');
-        }, 305);
+        closeOrder();
     });
 
     function modalOpenFn() {
@@ -405,19 +400,29 @@ var order = (function() {
                 }
             }, 350);
         }
-    }
+    };
+    function closeOrder(){
+        $order.removeClass('active');
+        setTimeout(function() {
+            $orderWrapper.hide().removeClass('active');
+            $('.pop-up-wrapper.hed').removeClass('active');
+            $html.removeClass('hidden');
+            $('.page-wrapper').removeClass('hidden');
+        }, 305);
+    };
 })();
 var changeInput = (function(){
     $('.js-input-file').change(function() {
         var filename = $(this).val().split('\\').pop();
         var filePath = $(this).val();
-        $('.send-file__name').append('<div class="send-file__item"><a href="#" class="js-remove-item send-file__remove"></a>' + filename + '<input type="file" class="hidden" name="user_file[]" value=' + filePath + ' /> </div>');
+        $(this).parent().parent().find('.send-file__name').append('<div class="send-file__item"><a href="#" class="js-remove-item send-file__remove ignore"></a>' + filename + '<input type="file" class="hidden" name="user_file[]" value=' + filePath + ' /> </div>');
         $(this).val('');
     });
     
     $(document).on('click', '.js-remove-item', function(e) {
         e.preventDefault();
-        $(this).parent().detach();
+        e.stopPropagation();
+        $(this).parent().remove();
     });
 })();
 
@@ -502,4 +507,41 @@ $(document).on('click', '.js-sup-show', function(e) {
     e.preventDefault();
     $('.js-sup').show();
     $('.js-sup-hide').hide();
+});
+
+$('form').each(function(){
+    $(this).validate({
+        rules: {
+            name: {
+                required: true,
+        
+            },
+            phone: {
+                required: true,
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            vacancy: {
+            required: true
+            }
+        },
+        messages: {
+            name: {
+                required: '',
+        
+            },
+            phone: {
+                required: ''
+            },
+            email: {
+                required: '',
+                email: ''
+            },
+            vacancy: {
+                required: ''
+            }
+        }
+    });
 });

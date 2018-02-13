@@ -1,4 +1,5 @@
-<div class="pop-up-wrapper hed">
+//= chunks/head.html
+<div class="pop-up-wrapper hed active">
     <div class="pop-up-video">
         <a href="#" class="pop-up-video__close js-close-pop">
             <i class="icon">
@@ -9,8 +10,8 @@
         </a>
         <div class="pop-up-video__video-wrapper"></div>
     </div>
-    <div class="header__order-main-wrapper js-modal-wrapper">
-        <div class="header__order-wrapper js-modal">
+    <div class="header__order-main-wrapper js-modal-wrapper" style="display: block;">
+        <div class="header__order-wrapper js-modal active">
             <a href="#" class="header__order-close js-order-close">
                 <i class="icon">
                     <svg>
@@ -18,40 +19,23 @@
                     </svg>
                 </i>
             </a>
-            <div class="header-right-menu">
-                <div class="header__order-title">Заказать проект</div>
-                <div class="header__order-text">
-                    Оставьте заявку для получения коммерческого предложения. <br>
-                    Заполните форму и мы вышлем Вам предложение в котором решим, <br>
-                    чем можем вам помочь.
+            <div class="header-tnx">
+                <div class="header-tnx__circle">
+                    <div class="circle-img services__img">
+                        <img src="img/thanks.svg" class="circle-img__icon" alt="icon">
+                        <svg class="circle-img__circle">
+                            <use xlink:href="#why_we_circle"></use>
+                        </svg>
+                    </div>
                 </div>
-                <form class="header-form" get="POST">
-                    <div class="header__order-form">
-                        <div class="header__order-form-group">
-                            <input type="text" name="name" placeholder="Ваше имя" class="header__order-form-input">
-                        </div>
-                        <div class="header__order-form-group">
-                            <input type="text" name="email" placeholder="Ваш e-mail" class="header__order-form-input">
-                        </div>
-                        <div class="header__order-form-group">
-                            <input type="text" name="phone" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
-                        </div>
-                        <div class="header__order-form-group">
-                            <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
-                        </div>
-                    </div>
-                    <div class="header__order-bot">
-                        <div class="send-file">
-                            <div class="send-file__name"></div>
-                            <label class="send-file__label">
-                                <span class="send-file__icon"></span>
-                                <input class="js-input-file send-file__input" name="user_file" type="file">
-                                <span class="send-file__text">Вы можете прикрепить файл</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn">Отправить заявку</button>
-                    </div>
-                </form>
+                <div class="header-tnx__title">
+                    <span>Спасибо,</span><br>
+                    ваше сообщение отправлено!
+                </div>
+                <div class="header-tnx__text">
+                    <p>В ближайшее время мы вышлем Вам предложение в котором
+                        решим, чем можем вам помочь.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -99,3 +83,15 @@
         </form>
     </div>
 </div>
+<div class="page-wrapper">
+    <div class="overlay"></div>
+    //= chunks/header.html
+    <div class="page-body">
+        //= chunks/anchors.html
+        //= chunks/p-index-message.html
+    </div>
+    //= chunks/footer.html
+    //= chunks/scripts.html
+</div>
+</body>
+</html>

@@ -200,7 +200,7 @@
       <path d="M18.469,1.102 C17.776,0.320 16.495,0.001 14.050,0.001 L5.172,0.001 C2.671,0.001 1.368,0.340 0.678,1.173 C0.004,1.984 0.004,3.181 0.004,4.836 L0.004,7.990 C0.004,11.197 0.803,12.825 5.172,12.825 L14.050,12.825 C16.170,12.825 17.346,12.544 18.106,11.853 C18.886,11.146 19.218,9.991 19.218,7.990 L19.218,4.836 C19.218,3.090 19.166,1.887 18.469,1.102 ZM12.340,6.848 L8.308,8.846 C8.218,8.891 8.120,8.913 8.021,8.913 C7.910,8.913 7.799,8.885 7.700,8.828 C7.515,8.722 7.401,8.531 7.401,8.325 L7.401,4.342 C7.401,4.137 7.514,3.947 7.699,3.840 C7.885,3.733 8.115,3.726 8.307,3.821 L12.338,5.806 C12.543,5.907 12.672,6.108 12.672,6.327 C12.673,6.546 12.544,6.747 12.340,6.848 Z" class="ckcls-1"/>
     </symbol>
 </svg>
-<div class="pop-up-wrapper hed">
+<div class="pop-up-wrapper hed active">
     <div class="pop-up-video">
         <a href="#" class="pop-up-video__close js-close-pop">
             <i class="icon">
@@ -211,8 +211,8 @@
         </a>
         <div class="pop-up-video__video-wrapper"></div>
     </div>
-    <div class="header__order-main-wrapper js-modal-wrapper">
-        <div class="header__order-wrapper js-modal">
+    <div class="header__order-main-wrapper js-modal-wrapper" style="display: block;">
+        <div class="header__order-wrapper js-modal active">
             <a href="#" class="header__order-close js-order-close">
                 <i class="icon">
                     <svg>
@@ -220,40 +220,23 @@
                     </svg>
                 </i>
             </a>
-            <div class="header-right-menu">
-                <div class="header__order-title">Заказать проект</div>
-                <div class="header__order-text">
-                    Оставьте заявку для получения коммерческого предложения. <br>
-                    Заполните форму и мы вышлем Вам предложение в котором решим, <br>
-                    чем можем вам помочь.
+            <div class="header-tnx">
+                <div class="header-tnx__circle">
+                    <div class="circle-img services__img">
+                        <img src="img/thanks.svg" class="circle-img__icon" alt="icon">
+                        <svg class="circle-img__circle">
+                            <use xlink:href="#why_we_circle"></use>
+                        </svg>
+                    </div>
                 </div>
-                <form class="header-form" get="POST">
-                    <div class="header__order-form">
-                        <div class="header__order-form-group">
-                            <input type="text" name="name" placeholder="Ваше имя" class="header__order-form-input">
-                        </div>
-                        <div class="header__order-form-group">
-                            <input type="text" name="email" placeholder="Ваш e-mail" class="header__order-form-input">
-                        </div>
-                        <div class="header__order-form-group">
-                            <input type="text" name="phone" placeholder="Ваш телефон" class="header__order-form-input tel-mask">
-                        </div>
-                        <div class="header__order-form-group">
-                            <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="header__order-form-textarea"></textarea>
-                        </div>
-                    </div>
-                    <div class="header__order-bot">
-                        <div class="send-file">
-                            <div class="send-file__name"></div>
-                            <label class="send-file__label">
-                                <span class="send-file__icon"></span>
-                                <input class="js-input-file send-file__input" name="user_file" type="file">
-                                <span class="send-file__text">Вы можете прикрепить файл</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn">Отправить заявку</button>
-                    </div>
-                </form>
+                <div class="header-tnx__title">
+                    <span>Спасибо,</span><br>
+                    ваше сообщение отправлено!
+                </div>
+                <div class="header-tnx__text">
+                    <p>В ближайшее время мы вышлем Вам предложение в котором
+                        решим, чем можем вам помочь.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -644,306 +627,631 @@
     </header>
     <!-- /HEADER -->
     <div class="page-body">
-        <div class="b24-crm">
-            <section class="first-screen first-screen__b24">
-                <div class="container">
-                    <h1 class="first-screen__title">Внедрение Битрикс24</h1>
-                    <div class="first-screen__sub-title">Наши специалисты помогут в реализации проектов любой сложности и справятся с любой задачей</div>
-                    <a href="#next" class="first-screen__scroll js-scroll-anchor">
+        <div class="anchors">
+            <a href="#header" class="anchors__link js-scroll-anchor anchors__link--welcome active">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor1"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Добро пожаловать</span>
+                    </span>
+                </span>
+            </a>
+            <a href="#our-services" class="anchors__link js-scroll-anchor">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor2"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Наши услуги</span>
+                    </span>
+                </span>
+            </a>
+            <a href="#made-in" class="anchors__link js-scroll-anchor">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor3"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Сделано в Avivi</span>
+                    </span>
+                </span>
+            </a>
+            <a href="#what-is" class="anchors__link js-scroll-anchor">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor4"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Avivi это</span>
+                    </span>
+                </span>
+            </a>
+            <a href="#clients" class="anchors__link js-scroll-anchor">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor5"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Клиенты и отзывы</span>
+                    </span>
+                </span>
+            </a>
+            <a href="#footer" class="anchors__link js-scroll-anchor">
+                <i class="icon-circle">
+                    <svg>
+                        <use xlink:href="#circle"></use>
+                    </svg>
+                </i>
+                <i class="icon-btn">
+                    <svg>
+                        <use xlink:href="#anchor6"></use>
+                    </svg>
+                </i>
+                <span class="anchors__text-wrapper">
+                    <span class="anchors__text">
+                        <span>Контакты</span>
+                    </span>
+                </span>
+            </a>
+        </div>
+        <section class="js-height-section js-section first-screen first-screen__main-page" id="head-banner">
+            <div class="container">
+                <h1 class="first-screen__title"> Мы создаём<br> ваши преимущества
+                </h1>
+                <a href="https://www.youtube.com/embed/0H6Wk5UaI_U" class="first-screen__btn-play js-show-video">
+                    <i class="icon">
+                        <svg>
+                            <use xlink:href="#play-btn"></use>
+                        </svg>
+                    </i>
+                </a>
+                <div class="first-screen__sub-title">
+                    Создание продуктов любой сложности на Битрикс и Битрикс 24
+                </div>
+                <div class="first-screen__banners">
+                    <a href="#" class="first-screen__banner">
+                        <img src="img/banner-1.png" alt="banner">
+                    </a>
+                    <a href="#" class="first-screen__banner">
+                        <img src="img/banner-2.png" alt="banner">
+                    </a>
+                </div>
+                <a href="#our-services" class="first-screen__scroll js-scroll-anchor">
+                    <i class="icon">
+                        <svg>
+                            <use xlink:href="#scroll-arrow"></use>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+        </section>
+        <section class="js-section services" id="our-services">
+            <div class="container">
+                <div class="section-title section-title--underline">Наши услуги</div>
+                <div class="services__wrap">
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/main/service-1-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Техническая<br> поддержка</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/main/service-2-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Проектирование<br> и дизайн</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/service-3-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Внедрение и настройка CRM Bitrix 24</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/main/service-4-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Аудит сайтов</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/main/service-5-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Создание<br> интернет-магазинов</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                    <div class="services__item">
+                        <a href="#" class="circle-img services__img">
+                            <img src="img/main/service-6-icon.svg" class="circle-img__icon" alt="icon">
+                            <svg class="circle-img__circle">
+                                <use xlink:href="#why_we_circle"></use>
+                            </svg>
+                        </a>
+                        <div class="services__title">Создание <br>сайтов</div>
+                        <a class="btn btn--green" href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="js-section made-in" id="made-in">
+            <div class="section-title"><span>Сделано в Avivi</span></div>
+            <div class="made-in__container">
+                <div class="made-in__left">
+                    <div class="made-in__slider-b js-made-slider-b">
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova1</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova2</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova3</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova4</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova5</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova6</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide-b" data-filter-design>
+                            <div class="b-slider b-slider__boch">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="b-slider__text">
+                                    <div class="b-slider__title">#MBocharova7</div>
+                                    <p>Нами был разработан дизайн сайтап для модельерши <b>MBocharova</b>.</p>
+                                    <p>Клиенту был предоставлен полный цикл услуг - начиная от дизайна, заканчивая версткой и натяжкой.</p>
+                                    <p>В итоге конверсия сайта составила <b>45%</b>, что повысело прибыль клиента на 30%, полностью решив поставленную задачу.</p>
+                                    <a href="www.bocharovastyle.com">www.bocharovastyle.com</a>
+                                </div>
+                                <img class="b-slider__promo" src="img/b-lap.png" alt="laptop">
+                                <img src="img/bocharova.png" alt="bocharova" class="b-slider__bg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-in__right">
+                    <div class="made-in__slider js-made-slider">
+                        <div class="made-in__slide" data-filter-php>
+                            <div class="r-slider r-slider__pol">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova1</div>
+                                    <p>Совместными усилиями мы с ребятами из <b>Pollardi</b> смогли создать новый адаптивный сайт-каталог, который в выгодном свете представляет весь богатый спектр свадебной продукции и высокий уровень сервиса компании.</p>
+                                    <a href="#">pollardi.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-design>
+                            <div class="r-slider r-slider__pol">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova2</div>
+                                    <p>Совместными усилиями мы с ребятами из <b>Pollardi</b> смогли создать новый адаптивный сайт-каталог, который в выгодном свете представляет весь богатый спектр свадебной продукции и высокий уровень сервиса компании.</p>
+                                    <a href="#">pollardi.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-php>
+                            <div class="r-slider">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova3</div>
+                                    <p>Тут будет короткий текст про проект: его проектирование, разработку и функционал.</p>
+                                    <a href="#">intercolor.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-php>
+                            <div class="r-slider r-slider__pol">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova4</div>
+                                    <p>Совместными усилиями мы с ребятами из <b>Pollardi</b> смогли создать новый адаптивный сайт-каталог, который в выгодном свете представляет весь богатый спектр свадебной продукции и высокий уровень сервиса компании.</p>
+                                    <a href="#">pollardi.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-design>
+                            <div class="r-slider r-slider__pol"> 
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova5</div>
+                                    <p>Совместными усилиями мы с ребятами из <b>Pollardi</b> смогли создать новый адаптивный сайт-каталог, который в выгодном свете представляет весь богатый спектр свадебной продукции и высокий уровень сервиса компании.</p>
+                                    <a href="#">pollardi.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-php>
+                            <div class="r-slider">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova6</div>
+                                    <p>Тут будет короткий текст про проект: его проектирование, разработку и функционал.</p>
+                                    <a href="#">intercolor.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                        <div class="made-in__slide" data-filter-php>
+                            <div class="r-slider">
+                                <label class="r-slider__label">
+                                    <a href="#"></a>
+                                </label>
+                                <div class="r-slider__text">
+                                    <div class="r-slider__title">#MBocharova7</div>
+                                    <p>Тут будет короткий текст про проект: его проектирование, разработку и функционал.</p>
+                                    <a href="#">intercolor.ru</a>
+                                </div>
+                                <img src="img/pol_lap.png" alt="laptop" class="r-slider__bg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-in__controls">
+                    <!-- <ul class="made-in__filter">
+                        <li data-filter="design">дизайн</li>
+                        <li data-filter="bitrix">бітрікс24</li>
+                        <li data-filter="b24">бітрікс </li>
+                        <li data-filter="php">php </li>
+                    </ul> -->
+                    <button class="made-in__btn made-in__btn--next js-made-prev">
+                        <span></span>
+                    </button>
+                    <button class="made-in__btn made-in__btn--prev js-made-next">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="js-section about" id="what-is">
+            <div class="container">
+                <div class="section-title section-title--underline">Avivi это</div>
+                <div class="about__top">
+                    <div class="about__item">
+                        <div class="about__number about__number--years">
+                            <span class="about__number-wrapper">10</span>
+                        </div>
+                        <div class="about__text">
+                            Лет безупречной работы <br>
+                            над проектами любой сложности
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__number about__number--skils">
+                            <span class="about__number-wrapper">24</span>
+                        </div>
+                        <div class="about__text">Колоссально опытных <br> битрикс разработчика</div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__number about__number--world">
+                            <span class="about__number-wrapper">11</span>
+                        </div>
+                        <div class="about__text">
+                            Стран Мира, в которых проживают <br>
+                            наши счастливые клиенты
+                        </div>
+                    </div>
+                </div>
+                <div class="about__bot">
+                <div class="about__left">к тому <br>же:</div>
+                <div class="about__right">
+                    <p>
+                        <b>Мы команда сертифицированных специалистов, которые любят свою работу.</b>
+                        Будь то небольшой сайт, лендинг, интернет-магазин или корпоративный портал - мы одинаково успешно реализуем его используя все современные технологии и тенденции по веб-проектированию, применим наши знания и опыт полученный за все годы работы над крупными международными проектами чтобы Вы получили максимально эффективный инструмент для развития бизнеса.
+                        Мы выполняем задачи любой сложности, <b> не боимся брать на себя ответственность за выполнения полного цикла работ в оптимальные сроки</b> - от написания технического задания и проектирования до тестирования и окончательного запуска проекта с дальнейшей его технической поддержкой и обслуживанием.
+                    </p>
+                    <div class="about__partner-wrap">
+                    Компания Avivi является золотым партнером Битрикс
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="js-section clients" id="clients">
+            <div class="container clients__top-container">
+                <div class="section-title section-title--underline clients__title">Клиенты и отзывы</div>
+                <div class="clients__slider-wrap">
+                    <a class="clients__slider-arrow left js-clients-arrow" href="#" data-slider="slickPrev">
                         <i class="icon">
                             <svg>
-                                <use xlink:href="#scroll-arrow"></use>
+                                <use xlink:href="#prev-slide"></use>
                             </svg>
                         </i>
                     </a>
-                </div>
-            </section>
-            <div class="container">
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li>Внедрение Битрикс24</li>
-                    </ul>
-                </div>
-                <div class="b24-page__automatic" id="next">
-                    <div class="section-title section-title--underline">Автоматизация бизнеса</div>
-                    <div class="b24-page__banner">
-                        <div class="b24-page__banner-col">
-                            <img src="img/bitrix24-banner-1.png" alt="banner">
-                            <a href="#">Битрикс24: Облако</a>
-                        </div>
-                        <div class="b24-page__banner-col">
-                            <img src="img/bitrix24-banner-2.png" alt="banner">
-                            <a href="#">Битрикс24: Коробочная версия</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="consult">
-                <div class="consult__title">
-                    <div class="consult__title-left">Записаться На Консультацию</div>
-                    <div class="consult__title-right">Записаться На Консультацию</div>
-                </div>
-                <div class="consult__left">
-                    <!-- <div class="section-title">Записаться На Консультацию</div> -->
-                    <div class="consult__text">
-                        <img src="img/gr-cons.png" class="consult__logo" alt="logo">
-                        Мы свяжемся<br>
-                        с вами<br>
-                        <span>в течении<br>
-                        10 минут</span>
-                    </div>
-                </div>
-                <div class="consult__right">
-                    <img src="img/wt-cons.png" class="consult__logo" alt="logo">
-                    <img src="img/laptop.jpg" alt="laptop" class="consult__bg">
-                    <!-- <div class="section-title">Записаться На Консультацию</div> -->
-                    <div class="consult__mob-title">Мы свяжемся с вами <span>в течении 10 минут</span></div>
-                    <form class="consult__form">
-                        <div class="consult__col">
-                            <input type="text" placeholder="ФИО" name="name">
-                        </div>
-                        <div class="consult__col">
-                            <input type="text" placeholder="Телефон" class="tel-mask" name="phone">
-                        </div>
-                        <div class="consult__col">
-                            <input type="text" placeholder="Почта" name="email">
-                        </div>
-                        <div class="consult__col">
-                            <textarea type="text" placeholder="Сообщение"></textarea>
-                        </div>
-                        <button class="btn btn--green">Отправить</button>
-                    </form>
-                </div>
-            </section>
-            <div class="b24-page__main">
-                <div class="container">
-                    <section class="b24-why">
-                        <div class="section-title section-title--underline">Почему мы?</div>
-                        <div class="b24-why__container">
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <svg class="b24-why__svg">
-                                        <use xlink:href="#why_we_1"></use>
-                                    </svg>
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">Обратная связь в течении 10 минут!</div>
-                                <div class="b24-why__subtitle">Быстрее других</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <svg class="b24-why__svg">
-                                        <use xlink:href="#why_we_2"></use>
-                                    </svg>
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">Бесплатная консультация</div>
-                                <div class="b24-why__subtitle">Не навязываем. Решаем Вашу проблему</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <svg class="b24-why__svg">
-                                        <use xlink:href="#why_we_3"></use>
-                                    </svg>
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">Персональный менеджер</div>
-                                <div class="b24-why__subtitle">Индивидуальный подход</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <svg class="b24-why__svg">
-                                        <use xlink:href="#why_we_4"></use>
-                                    </svg>
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">Сопровождение после приобретения</div>
-                                <div class="b24-why__subtitle">Не бросим Вас после продажи</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <img src="img/why_we_5.png" alt="why">
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_green"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">11 сертифицированных разработчиков</div>
-                                <div class="b24-why__subtitle">Больше, чем у всех</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <img src="img/why_we_6.png" alt="why">
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">30 сертифицированных специалистов</div>
-                                <div class="b24-why__subtitle">Команда профи</div>
-                            </div>
-                            <div class="b24-why__col">
-                                <div class="b24-why__icon">
-                                    <svg class="b24-why__svg">
-                                        <use xlink:href="#why_we_7"></use>
-                                    </svg>
-                                    <svg class="b24-why__circle">
-                                        <use xlink:href="#why_we_circle"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-why__title">11 лет опыта внедрения IT решений</div>
-                                <div class="b24-why__subtitle">Успешная реализация сложных задач</div>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="b24-pack">
-                        <div class="section-title section-title--underline">Пакеты внедрения Битрикс24</div>
-                        <div class="b24-pack__row">
-                            <div class="b24-pack__col">
-                                <div class="b24-pack__top">
-                                    <div class="b24-pack__title">Начальный</div>
-                                </div>
-                                <div class="b24-pack__list">
-                                    <li>Регистрация портала (Облако)</li>
-                                    <li>Приглашение сотрудников и настройка структуры компании</li>
-                                    <li>Подключение почты</li>
-                                    <li>Настройка воронки лидов и счетов</li>
-                                    <li>Настройка телефонии SIP</li>
-                                </div>
-                                <div class="b24-pack__bottom">
-                                    <div class="b24-pack__price">9000 грн</div>
-                                    <a href="#" class="btn btn--green">заказать</a>
-                                </div>
-                            </div>
-                            <div class="b24-pack__col">
-                                <div class="b24-pack__top">
-                                    <div class="b24-pack__title">Профессиональный</div>
-                                </div>
-                                <div class="b24-pack__list">
-                                    <li>Регистрация портала (облако)</li>
-                                    <li>Приглашение сотрудников и настройка структуры компании</li>
-                                    <li>Настройка рабочего дня сотрудников и дневных отчетов</li>
-                                    <li>Подключение почты</li>
-                                    <li>Настройка прав доступа</li>
-                                    <li>Настройка воронки лидов и счетов</li>
-                                    <li>Настройка телефонии SIP</li>
-                                    <li>Интеграция с сайтом (до 3х)</li>
-                                    <li>Настройка открытых линий</li>
-                                    <li>Консультации 8 часов</li>
-                                </div>
-                                <div class="b24-pack__bottom">
-                                    <div class="b24-pack__price">15000 грн</div>
-                                    <a href="#" class="btn btn--green">заказать</a>
-                                </div>
-                            </div>
-                            <div class="b24-pack__col">
-                                <div class="b24-pack__top">
-                                    <div class="b24-pack__title">Эксперт</div>
-                                </div>
-                                <div class="b24-pack__list">
-                                    <li>Регистрация портала (коробка)</li>
-                                    <li>Настройка сервера под требования Битрикс24</li>
-                                    <li>Настройка корпоративного интерфейса</li>
-                                    <li>Приглашение сотрудников и настройка структуры компании</li>
-                                    <li>настройка рабочего дня сотрудников и дневных отчетов</li>
-                                    <li>Подключение почты</li>
-                                    <li>Настройка прав доступа</li>
-                                    <li>Настройка воронки лидов и счетов</li>
-                                    <li>Настройка телефонии SIP</li>
-                                    <li>Интеграция с сайтом, (до 3х)</li>
-                                    <li>Настройка открытых линий</li>
-                                    <li>Консультации 12 часов</li>
-                                    <li>1 год поддержки обновления системы</li>
-                                </div>
-                                <div class="b24-pack__bottom">
-                                    <div class="b24-pack__price">21000 грн</div>
-                                    <a href="#" class="btn btn--green">заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="b24-page__bottom">
-                <div class="container">
-                    <div class="b24-our">
-                        <div class="section-title section-title--underline">Наши возможности</div>
-                        <div class="b24-our__wrap">
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-1"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Внедрение Битрикс24 в Ваш бизнес без ущерба и простоев.</div>
-                            </div>
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-2"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Настройка телефонии и CRM</div>
-                            </div>
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-3"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Консультация по работе и обучение персонала</div>
-                            </div>
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-4"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Написание персональных модулей под Ваши задачи</div>
-                            </div>
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-5"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Интеграция с сторонним программным обеспечением</div>
-                            </div>
-                            <div class="b24-our__item">
-                                <div class="b24-our__icon">
-                                    <svg>
-                                        <use xlink:href="#capabilities-6"></use>
-                                    </svg>
-                                </div>
-                                <div class="b24-our__text">Любые другие работы по Битрикс24 не зависимо от сложности</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="b24-opportunity">
-                    <div class="b24-our__shape"></div>
-                    <div class="container">
-                        <div class="section-title section-title--underline">ПОЛУЧИТЕ ВОЗМОЖНОСТЬ УВЕЛИЧИТЬ ЭФФЕКТИВНОСТЬ КОМПАНИИ</div>
-                        <div class="b24-opportunity__info">
-                            Если даже у Вас уже есть Битрикс24 но вы не знаете что с ним делать,<br>
-                            <span>Обращайтесь прямо сейчас!</span>
-                        </div>
-                        <div class="b24-opportunity__arrow">
+                    <a class="clients__slider-arrow right js-clients-arrow" href="#" data-slider="slickNext">
+                        <i class="icon">
                             <svg>
-                                <use xlink:href="#capabilities-arrow"></use>
+                                <use xlink:href="#next-slide"></use>
                             </svg>
+                        </i>
+                    </a>
+                    <div class="clients__top-slider js-clients-slider">
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
+                        </div>
+                        <div class="clients__top-slide">
+                            <img src="img/tmp/client-1.png">
                         </div>
                     </div>
                 </div>
+                <div class="clients__bottom-wrapper">
+                  <div class="clients__bottom-slider js-bottom-slider">
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                        Благодарим компанию Avivi  за разработанный сайт! <br>
+                        Огромная благодарность проектному менеджеру Алексею за  грамотные советы, четкую постановку задач и главное - качество и ориентацию на результат! Отдельное спасибо за развернутый план действий перед началом работ. Приятно работать с пунктуальными и ответственными людьми.<br>
+                        Всё сделали красиво и в срок!<br>
+                        Приглашаю всех посетить сайт pollardi.ru и оценить весь его функционал!
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                            Друзья!<br>
+                            Хотим сказать Вам - спасибо! За плодотворное сотрудничество и профессиональный подход к своему делу. С Вами было хорошо, комфортно и приятно работать, а это сейчас редкость.<br>
+                            Благодаря реализации нашего проекта, мы нашли новых клиентов, масштабировали бизнес и увеличили прибыль. Наш успех в интернете связан с быстрой реализацией поставленных задач по созданию веб-ресурса который стал возможен благодаря нашему с Вами сотрудничеству.<br>
+                            Уверена что мы и дальше будем работать вместе. Желаю Вашей дружной команде успехов и процветания!
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                            If I wanted feedback, Avivi would respond within an hour or under. Hope to develop our future cooperation with them.
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                            If I wanted feedback, Avivi would respond within an hour or under. Hope to develop our future cooperation with them.
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                            Avivi’s team gives us status updates so we work quite transparently. Thank you for cooperation, guys!
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                    <div class="clients__bottom-slide">
+                      <div class="clients__bottom-slide-text">
+                            Выражаем благодарность коллективу разработчиков Avivi <br>
+                            В лице Avivi компания MIT Labs нашла надежного и компетентного партнера для реализации на платформе 1С-Битрикс проектов самой различной сложности. Уверенность и профессионализм сотрудников Avivi позволил нам успешно и точно в срок реализовать ряд непростых проектов для крайне требовательных заказчиков.<br>
+                            Мы верим в сохранение сложившихся деловых и дружеских отношений и надеемся на дальнейшее взаимовыгодное сотрудничество!
+                      </div>
+                      <div class="clients__readmore js-readmore">Читать полностью</div>
+                      <div class="clients__bottom-slide-img-wrap">
+                          <img src="img/tmp/client.jpg">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clients__bottom-slide-name-wrap">
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                  <div class="clients__client-info">
+                    <div class="clients__bottom-slide-name">Осипов Леонид Петрович</div>
+                    <div class="clients__bottom__slide-position">генеральный директор</div>
+                  </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
     <!-- FOOTER -->
     <section class="consult" id="consult">
