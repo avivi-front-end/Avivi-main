@@ -73,7 +73,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     return gulp.src(path.src.style)
         .pipe(cache())
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['> 0%'],
             cascade: false
@@ -155,7 +155,7 @@ gulp.task('prod_css',['clean_css'],function() {
 
     return gulp.src(path.src.style)
         .pipe(cache())
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['> 0%'],
             cascade: false

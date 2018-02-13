@@ -675,9 +675,21 @@
             <section class="first-screen first-screen__blog">
                 <div class="container">
                     <h1 class="first-screen__title first-screen__title--underline">БЛОГ</h1>
-                    <div class="first-screen__sub-title first-screen__sub-title--wide">Наш блог - это место, где мы публично выражаем своё мнение по всем волнующим человечество вопросам.<br>
-                        <a href="#">Подпишитесь на еженедельный дайджест</a>, чтобы не пропустить публикации.</div>
-                        <a href="#next" class="first-screen__scroll js-scroll-anchor">
+                    <div class="first-screen__sub-title first-screen__sub-title--wide js-sub-text">Наш блог - это место, где мы публично выражаем своё мнение по всем волнующим человечество вопросам.<br>
+                        <a href="#" class="js-show-subform">Подпишитесь на еженедельный дайджест</a>, чтобы не пропустить публикации.
+                    </div>
+                    <div class="blog-sub__wrap js-subform">
+                        <form class="blog-sub">
+                            <a href="#" class="blog-sub__close">
+                                <svg>
+                                    <use xlink:href="#close-icon"></use>
+                                </svg>
+                            </a>
+                            <input class="blog-sub__input" placeholder="Ваш E-Mail">
+                            <button type="submit" class="btn btn--green blog-sub__submit ">Подписаться</button>
+                        </form>
+                    </div>
+                    <a href="#next" class="first-screen__scroll js-scroll-anchor">
                         <i class="icon">
                             <svg>
                                 <use xlink:href="#scroll-arrow"></use>

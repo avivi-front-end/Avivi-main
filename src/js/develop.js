@@ -426,6 +426,14 @@ var changeInput = (function(){
     });
 })();
 
+var blog = (function(){
+    var
+        showBtn = $('.js-sub-text'),
+        showShow = $('.js-sub-show'),
+        subscribe = $('.js-sub')
+    ;
+})();
+
 var clientsSlider = (function(){
     var clientsCount = $('.js-bottom-slider .clients__bottom-slide').length - 1;
 
@@ -524,7 +532,7 @@ $('form').each(function(){
                 email: true
             },
             vacancy: {
-            required: true
+                required: true
             }
         },
         messages: {

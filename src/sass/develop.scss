@@ -990,7 +990,7 @@ h4{
     &__b24{background: url(../img/bitrix24.jpg); background-size: cover;}
     &__team{background: url(../img/team.jpg); background-size: cover;}
     &__support{background: url(../img/support-bg.jpg); background-size: cover;}
-    &__blog{background: url(../img/blog-header.jpg); background-size: cover;}
+    &__blog{background: url(../img/blog-header.jpg); background-size: cover; height: 310px;}
     &__1c{background: url(../img/bitrix1c/bitrix24.jpg); background-size: cover;}
     &__composite{background: url(../img/bitrix1c/bitrix-composite.jpg); background-size: cover; background-position: center; padding: 40px 0 131px 0;
         .first-screen__title{max-width: 660px; margin: 0 auto; line-height: 62px;}
@@ -3416,4 +3416,30 @@ h4{
     font-family: $robotoslabreg;
     font-size: 18px;
     color: #4b586d;
+}
+.blog-sub{
+    display: flex;
+    align-items: center;
+    max-width: 622px;
+    margin: 0 auto;
+    &__wrap{display: none;}
+    &__close{
+        svg{ fill: #fff; width: 44px; height: 44px;}
+    }
+    &__input{
+        margin: 0 15px;
+        flex-grow: 1;
+        padding-left: 14px;
+        padding-right: 14px;
+        border: none;
+        font-size: 15px;
+        height: 41px;
+        color: #fff;
+        background: none;
+        border-bottom: #cbcfd5 solid 1px;
+        &::-webkit-input-placeholder {color:#757575;}
+        &::-moz-placeholder          {color:#757575;}
+        &:-moz-placeholder           {color:#757575;}
+        &:-ms-input-placeholder      {color:#757575;}
+    }
 }
