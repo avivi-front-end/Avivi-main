@@ -3695,12 +3695,18 @@ h4 {
     .mob-menu__item--career .icon-wrap .icon-btn svg {
       width: 18px;
       height: 19px; }
+    .mob-menu__item--audit .icon-wrap .icon-btn svg {
+      width: 12px;
+      height: 17px; }
     .mob-menu__item--services .icon-wrap .icon-btn svg {
-      width: 15px;
-      height: 20px; }
+      width: 18px;
+      height: 16px; }
     .mob-menu__item--price .icon-wrap .icon-btn svg {
       width: 18px;
       height: 18px; }
+    .mob-menu__item--shop .icon-wrap .icon-btn svg {
+      width: 17px;
+      height: 17px; }
     .mob-menu__item--contacts .icon-wrap .icon-btn svg {
       width: 15px;
       height: 19px; }
@@ -3711,8 +3717,8 @@ h4 {
       width: 21px;
       height: 23px; }
     .mob-menu__item--bitrix24 .icon-wrap .icon-btn svg {
-      width: 21px;
-      height: 23px; }
+      width: 24px;
+      height: 12px; }
     .mob-menu__item--options .icon-wrap .icon-btn svg {
       width: 22px;
       height: 22px; }
