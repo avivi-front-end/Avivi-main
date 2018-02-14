@@ -678,17 +678,19 @@
                     <div class="first-screen__sub-title first-screen__sub-title--wide js-sub-text">Наш блог - это место, где мы публично выражаем своё мнение по всем волнующим человечество вопросам.<br>
                         <a href="#" class="js-show-subform">Подпишитесь на еженедельный дайджест</a>, чтобы не пропустить публикации.
                     </div>
-                    <div class="blog-sub__wrap js-subform">
+                    <div class="blog-sub__wrap js-subform" style="display: none;">
                         <form class="blog-sub">
-                            <a href="#" class="blog-sub__close">
+                            <a href="#" class="blog-sub__close js-sub-close">
                                 <svg>
                                     <use xlink:href="#close-icon"></use>
                                 </svg>
                             </a>
-                            <input class="blog-sub__input" placeholder="Ваш E-Mail">
+                            <input type="text" name="email" class="blog-sub__input" placeholder="Ваш E-Mail">
                             <button type="submit" class="btn btn--green blog-sub__submit ">Подписаться</button>
                         </form>
                     </div>
+                    <div class="blog-sub__ok-mess">Спасибо, ваш e-mail добавлен!</div>
+                    <div class="blog-sub__err-mess">Вы не ввели e-mail, либо он не коректный!</div>
                     <a href="#next" class="first-screen__scroll js-scroll-anchor">
                         <i class="icon">
                             <svg>
@@ -921,7 +923,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="contacts__map" id="map"></div>
+                <div class="contacts__map" id="map" data-coorditats=" [[50.422815, 30.593305] ,[49.426637, 26.989452]]"></div>
             </div>
             <div class="contacts__photos">
             <!--cюда ничего лишнего по структуре не ложить! размеры блокам даються через nth-child !-->

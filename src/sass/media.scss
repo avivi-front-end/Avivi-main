@@ -383,6 +383,7 @@
     .first-screen{min-height: 200px; padding: 20px 0 60px;}
 }
 @media (max-width: 778px){
+    .first-screen__blog{min-height: 250px;}
     .b-create{
         &__top{padding: 10px 0 35px;
             .section-title{line-height: 40px;}

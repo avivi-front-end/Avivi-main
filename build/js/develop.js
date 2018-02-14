@@ -98,57 +98,6 @@ var madeSliders = (function(){
         sliderBig.slick('slickGoTo', 0);
     }
 })();
-var contacts = (function() {
-    var $changeTown = $('.js-change-town');
-    var $townWrap = $('.contacts__city-info-wrap');
-    //bind events
-    $changeTown.on('click', function(e) {
-        e.preventDefault();
-        if ($(this).hasClass('active')) {
-            return false;
-        }
-        var target = $(this).attr('href');
-        var town = target.split('#')[1];
-        $changeTown.removeClass('active');
-        $(this).addClass('active');
-        changeTownFn(target);
-        //также поменяй город функцией ниже
-        initMap(town);
-    });
-    //functions
-    function changeTownFn(target) {
-        $townWrap.removeClass('active');
-        $(target).addClass('active');
-    }
-    //plugins
-    //функционал табов + смена карты
-    var latlng = [
-        [55.762553, 37.620266],
-        [49.426637, 26.989452],
-    ]
-
-    function initMap(town) {
-        var townlatlng = town == 'kiev' ? latlng[0] : latlng[1];
-        var map;
-        var myLatlng = new google.maps.LatLng(townlatlng[0], townlatlng[1]);
-
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng(townlatlng[0], townlatlng[1]),
-            zoom: 18,
-            scrollwheel: false,
-        });
-        var marker = new google.maps.Marker({
-            icon: new google.maps.MarkerImage('img/map-icon.png', new google.maps.Size(47, 47)),
-            position: myLatlng,
-        });
-        marker.setMap(map);
-        google.maps.event.trigger(map, 'resize');
-    };
-    if ($('#map').length > 0) {
-        initMap('kiev');
-    }
-    // по умолчанию показываем киев
-})();
 var showLanguage = (function(){
     $('.js-show-language').on('click', function() {
         var $this = $(this);
@@ -428,10 +377,22 @@ var changeInput = (function(){
 
 var blog = (function(){
     var
-        showBtn = $('.js-sub-text'),
-        showShow = $('.js-sub-show'),
-        subscribe = $('.js-sub')
+        showText = $('.js-sub-text'),
+        showBtn = $('.js-show-subform'),
+        subscribe = $('.js-subform'),
+        close = $('.js-sub-close')
     ;
+
+    showBtn.click(function(){
+        showText.hide();
+        subscribe.show();
+    });
+
+    close.click(function(){
+        showText.show();
+        subscribe.hide();
+    });
+
 })();
 
 var clientsSlider = (function(){
@@ -553,3 +514,59 @@ $('form').each(function(){
         }
     });
 });
+
+//contacts section fn
+var contacts = (function() {
+    //cache DOM
+    var $changeTown = $('.js-change-town');
+    var $townWrap = $('.contacts__city-info-wrap');
+    //bind events
+    $changeTown.on('click', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            return false;
+        }
+        var target = $(this).attr('href');
+        var town = target.split('#')[1];
+        $changeTown.removeClass('active');
+        $(this).addClass('active');
+        changeTownFn(target);
+        //также поменяй город функцией ниже
+        initMap(town);
+    });
+    //functions
+    function changeTownFn(target) {
+        $townWrap.removeClass('active');
+        $(target).addClass('active');
+    }
+    //plugins
+    //функционал табов + смена карты
+	var pointsArray = JSON.parse($('#map').data('coorditats'));
+	var latlng = new Array;
+	latlng = pointsArray;
+
+    function initMap(town) {
+        var townlatlng = town == 'kiev' ? latlng[0] : latlng[1];
+        var map;
+        var myLatlng = new google.maps.LatLng(townlatlng[0], townlatlng[1]);
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: new google.maps.LatLng(townlatlng[0], townlatlng[1]),
+            zoom: 15,
+            scrollwheel: false,
+        });
+        var marker = new google.maps.Marker({
+            icon: new google.maps.MarkerImage('/img/map-icon.png', new google.maps.Size(47, 47)),
+            position: myLatlng,
+        });
+        marker.setMap(map);
+        map.setOptions({
+            // styles: styles
+        });
+        google.maps.event.trigger(map, 'resize');
+    };
+    if ($('#map').length > 0) {
+        initMap('kiev');
+    }
+    // по умолчанию показываем киев
+})();

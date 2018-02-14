@@ -990,7 +990,9 @@ h4{
     &__b24{background: url(../img/bitrix24.jpg); background-size: cover;}
     &__team{background: url(../img/team.jpg); background-size: cover;}
     &__support{background: url(../img/support-bg.jpg); background-size: cover;}
-    &__blog{background: url(../img/blog-header.jpg); background-size: cover; height: 310px;}
+    &__blog{background: url(../img/blog-header.jpg); background-size: cover; min-height: 310px;
+        &--unsubscribe{padding: 16px 0 46px 0;}
+    }
     &__1c{background: url(../img/bitrix1c/bitrix24.jpg); background-size: cover;}
     &__composite{background: url(../img/bitrix1c/bitrix-composite.jpg); background-size: cover; background-position: center; padding: 40px 0 131px 0;
         .first-screen__title{max-width: 660px; margin: 0 auto; line-height: 62px;}
@@ -3422,12 +3424,11 @@ h4{
     align-items: center;
     max-width: 622px;
     margin: 0 auto;
-    &__wrap{display: none;}
-    &__close{
+    &__close{margin-right: 15px;
         svg{ fill: #fff; width: 44px; height: 44px;}
     }
     &__input{
-        margin: 0 15px;
+        margin: 0 15px 0 0;
         flex-grow: 1;
         padding-left: 14px;
         padding-right: 14px;
@@ -3441,5 +3442,53 @@ h4{
         &::-moz-placeholder          {color:#757575;}
         &:-moz-placeholder           {color:#757575;}
         &:-ms-input-placeholder      {color:#757575;}
+        &.error{ border-color: #d5213b;}
+        &.valid{ border-color: #159e31;}
+    }
+    &__ok-mess{
+        display: none;
+        text-align: center;
+        color: #59d556;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    &__err-mess{
+        display: none;
+        text-align: center;
+        color: #d5213b;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    &.blog-sub--unsub{
+        input{ padding-left: 0;}
+        .btn{ min-width: 186px;}
+    }
+}
+.dispatch{text-align: center;
+    .btn{min-width: 222px;}
+    &__img{width: 90px; height: 90px;}
+    &__title{
+        color: #fff;
+        font-size: 36px;
+        line-height: 1;
+        margin: 10px 0 15px;
+        font-family: $robotoslabreg;
+    }
+    &__subtitle{
+        color: #ffffff;
+        font-family: $robotoreg;
+        font-size: 15px;
+        margin-bottom: 22px;
+        a{ color: #59d556; text-decoration: underline;
+            &:hover{ text-decoration: none;}
+        }
+    }
+    &__select{margin: 20px 0;
+        label{ font-size: 18px; color: #ffffff; font-family: $robotoslabreg; }
+        .jq-selectbox__select{padding: 0 45px 0 10px;}
+        .create-pop__select{width: 190px;
+            li{ text-align: left; min-height: 18px; padding: 5px 10px 6px; font-family: $robotoslabreg; font-size: 18px;}
+        }
+        .jq-selectbox__trigger-arrow{border-top-color: #fff;}
     }
 }

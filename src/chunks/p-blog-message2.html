@@ -1,23 +1,27 @@
 <div class="blog">
-    <section class="first-screen first-screen__blog">
+    <section class="first-screen first-screen__blog first-screen__blog--unsubscribe">
         <div class="container">
-            <h1 class="first-screen__title first-screen__title--underline">БЛОГ</h1>
-            <div class="first-screen__sub-title first-screen__sub-title--wide js-sub-text">Наш блог - это место, где мы публично выражаем своё мнение по всем волнующим человечество вопросам.<br>
-                <a href="#" class="js-show-subform">Подпишитесь на еженедельный дайджест</a>, чтобы не пропустить публикации.
+            <div class="dispatch">
+                <div class="circle-img dispatch__img">
+                    <img src="img/main/service-1-icon.svg" class="circle-img__icon" alt="icon">
+                    <svg class="circle-img__circle">
+                        <use xlink:href="#why_we_circle"></use>
+                    </svg>
+                </div>
+                <div class="create-pop__select-row dispatch__select">
+                    <label>Слать письма:</label>
+                    <div class="create-pop__select">
+                        <select data-smart-positioning="false">
+                            <option value="1 раз в неделю">1 раз в неделю</option>
+                            <option value="2 раз в неделю">2 раз в неделю</option>
+                            <option value="3 раз в неделю">3 раз в неделю</option>
+                            <option value="4 раз в неделю">4 раз в неделю</option>
+                        </select>
+                    </div>
+                    <div class="blog-sub__ok-mess">Спасибо</div>
+                </div>
+                <a href="#" class="btn btn--green">СОГЛАСЕН</a>
             </div>
-            <div class="blog-sub__wrap js-subform" style="display: none;">
-                <form class="blog-sub">
-                    <a href="#" class="blog-sub__close js-sub-close">
-                        <svg>
-                            <use xlink:href="#close-icon"></use>
-                        </svg>
-                    </a>
-                    <input type="text" name="email" class="blog-sub__input" placeholder="Ваш E-Mail">
-                    <button type="submit" class="btn btn--green blog-sub__submit ">Подписаться</button>
-                </form>
-            </div>
-            <div class="blog-sub__ok-mess">Спасибо, ваш e-mail добавлен!</div>
-            <div class="blog-sub__err-mess">Вы не ввели e-mail, либо он не коректный!</div>
             <a href="#next" class="first-screen__scroll js-scroll-anchor">
                 <i class="icon">
                     <svg>
