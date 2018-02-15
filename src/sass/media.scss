@@ -737,6 +737,10 @@
     }
 }
 @media(max-width: 500px){
+    .create-pop__select{margin-top: 15px;}
+    .blog-sub{flex-wrap: wrap; justify-content: center;
+        .btn{margin-top: 15px;}
+    }
     .mob-menu-list{margin-bottom: 25px;}
     .header__map-link, .mob-menu__social, .mob-menu-contacts{margin-bottom: 15px;}
     .mob-menu{
