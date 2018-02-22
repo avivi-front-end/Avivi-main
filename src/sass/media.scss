@@ -588,6 +588,9 @@
     }
 }
 @media (max-width: 600px){
+    .page404__title{
+        font-size: 200px;
+    }
     .audit{
         &-bottom{padding: 40px 0 30px;
             p{
@@ -982,6 +985,12 @@
     }
 }
 @media (max-width: 400px){
+    .page404__title{
+        font-size: 150px;
+    }
+    .page404__icon{
+        display: none;
+    }
     .blog{
         &-article{
             &__row{flex-direction: column; justify-content: center;}

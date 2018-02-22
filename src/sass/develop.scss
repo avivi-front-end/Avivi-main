@@ -3495,3 +3495,29 @@ h4{
 .design-slider{
     margin-top: 70px;
 }
+.page404{text-align: center; padding: 50px 0 100px;
+    &__title{
+        font-family: $intro;
+        color: #4b586d;
+        font-size: 300px;
+        position: relative;
+    }
+    &__icon{
+        width: 121px;
+        height: 121px;
+        margin-top: -100px;
+        margin-bottom: 30px;
+        .circle-img__icon{
+            width: 46px;
+            height: 46px;
+            fill: #59d556;
+        }
+    }
+    &__subtitle{
+        color: #4b586d;
+        margin-bottom: 30px;
+        font-size: 18px;
+        text-align: center;
+        font-family: $robotoslabbold;
+    }
+}
