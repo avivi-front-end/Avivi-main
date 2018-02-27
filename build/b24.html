@@ -1144,19 +1144,24 @@
             <img src="img/laptop.jpg" alt="laptop" class="consult__bg">
             <div class="consult__mob-title">Мы свяжемся с вами <span>в течении 10 минут</span></div>
             <form class="consult__form">
-                <div class="consult__col">
-                    <input type="text" placeholder="ФИО" name="name">
+                <div class="consult__form-wrap">
+                    <div class="consult__col">
+                        <input type="text" placeholder="ФИО" name="name">
+                    </div>
+                    <div class="consult__col">
+                        <input type="text" class="tel-mask" placeholder="Телефон" name="phone">
+                    </div>
+                    <div class="consult__col">
+                        <input type="text" placeholder="Почта" name="email">
+                    </div>
+                    <div class="consult__col">
+                        <textarea type="text" placeholder="Сообщение" name="text"></textarea>
+                    </div>
+                    <div class="consult__col">
+                        <button type="submit" class="btn btn--green">Отправить</button>
+                        <div class="consult__tnx-mess">Спасибо!</div>
+                    </div>
                 </div>
-                <div class="consult__col">
-                    <input type="text" class="tel-mask" placeholder="Телефон" name="phone">
-                </div>
-                <div class="consult__col">
-                    <input type="text" placeholder="Почта" name="email">
-                </div>
-                <div class="consult__col">
-                    <textarea type="text" placeholder="Сообщение" name="text"></textarea>
-                </div>
-                <button class="btn btn--green">Отправить</button>
             </form>
         </div>
     </section>

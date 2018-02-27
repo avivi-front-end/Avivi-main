@@ -383,12 +383,14 @@ var blog = (function(){
         close = $('.js-sub-close')
     ;
 
-    showBtn.click(function(){
+    showBtn.click(function(e){
+        e.preventDefault();
         showText.hide();
         subscribe.show();
     });
 
-    close.click(function(){
+    close.click(function(e){
+        e.preventDefault();
         showText.show();
         subscribe.hide();
     });

@@ -1204,6 +1204,14 @@ h4{
     &__bottom-slide-position { color: #4b586d; font-family: $robotolight;}
 }
 .consult{display: flex; position: relative;
+    &__tnx-mess{
+        display: none;
+        color: #59d556;
+        font-size: 20px;
+        line-height: 1.6;
+        line-height: 42px;
+        margin-top: 37px;
+    }
     &--carrer{
         .consult__col{width: 50%;
             &:nth-child(5){width: 100%;}
@@ -1324,9 +1332,12 @@ h4{
         position: relative;
         z-index: 5;
         max-width: 695px;
-        display: flex;
-        flex-wrap: wrap;
         margin: 0 -8px;
+        &-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
     }
     &__bottom{
         padding-right: 20px;
