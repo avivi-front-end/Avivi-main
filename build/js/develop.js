@@ -14,7 +14,17 @@ if (!window.console.log) window.console.log = function() {};
     $('.js-sameHeight').matchHeight();
 
     $('.tel-mask').mask('+9 (999) 999-99-99 ');
-
+    //vlidation .tel-mask
+    $('form').on('focusout', '.tel-mask', function(e){
+        var val = $(this).val();
+        if (val == '+_ (___) ___-__-__ ') {
+            $(this).addClass('error-tel-mask');
+            $(this).removeClass('valid-tel-mask');
+        } else {
+            $(this).addClass('valid-tel-mask');
+            $(this).removeClass('error-tel-mask');
+        }
+    })
     setTimeout(function() {
         $('select').styler();
       }, 100)
@@ -45,7 +55,7 @@ if (!window.console.log) window.console.log = function() {};
                 slidesToShow: 1,
             }
         }
-    ] 
+    ]
       });
 
     }());
@@ -481,6 +491,9 @@ $(document).on('click', '.js-sup-show', function(e) {
 });
 
 $('form').each(function(){
+    $.validator.addMethod("alphabetsnspace", function(value, element) {
+        return this.optional(element) || /^[а-яА-ЯёЁіІa-zA-Z ]*$/.test(value);
+    });
     $(this).validate({
         rules: {
             name: {
@@ -488,7 +501,7 @@ $('form').each(function(){
         
             },
             phone: {
-                required: true,
+                required: false,
             },
             email: {
                 required: true,
@@ -501,7 +514,7 @@ $('form').each(function(){
         messages: {
             name: {
                 required: '',
-        
+                alphabetsnspace: false
             },
             phone: {
                 required: ''

@@ -3532,3 +3532,19 @@ h4{
         font-family: $robotoslabbold;
     }
 }
+/* work with js-file --> .validate()
+phone: {
+    required: false,
+} */
+.consult__col .tel-mask.valid {
+    box-shadow: 0px 1px 0px 0px #ffffff;
+}
+.tel-mask.valid {
+    border-color: #cbcfd5;
+}
+.consult__col .tel-mask.valid-tel-mask {
+    box-shadow: 0px 1px 0px 0px #159e31;
+}
+.consult__col .tel-mask.error-tel-mask {
+    box-shadow: 0px 1px 0px 0px #d5213b;
+}

@@ -196,9 +196,19 @@
         &__logo{display: none;}
         &__form{margin: 0 auto; justify-content: center;}
     }
+    .made-in__container {
+        max-width: 96%;
+    }
+    .contacts__copyright {
+        right: 50px;
+        bottom: 15px;
+    }
 }
 @media(max-width: 992px){
     .share-text{display: block; margin-right: 20px;}
+    .mob-menu__dop {
+        width: 100%;
+    }
 }
 @media(max-width: 992px){
     .blog{
@@ -534,17 +544,22 @@
         }
     }
     .mob-menu{
+        height: auto;
         &__dop{
             padding-left: 45px;
+            width: 100%;
         }
     }
     .made-in{
+        &__container {
+            max-width: 94%;
+        }
         &:after{top: 16px;}
     }
     .b-slider{
         &__boch{background-size: 150px; background-position: 4% 90%}
         &__bg{width: 275px;}
-        &__text{max-width: 320px;
+        &__text{max-width: 360px;
             p{font-size: 12px;}
             a{font-size: 15px;}
         }
@@ -578,6 +593,29 @@
             &-wrapper{max-width: none;}
         }
         &__map{height: 262px;}
+    }
+    .team__wrap {
+        padding: 20px 0 60px;
+    }
+    .team__photo {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 740px) {
+    .b-slider:after {
+        content: none;
+    }
+    .b-slider__text {
+        max-width: 100%;
+        padding: 0 10px 0 7vw;
+        margin-bottom: 30px;
+    }
+    .b-slider__text p {
+        font-size: 16px;
+        line-height: 1.2em;
+    }
+    .b-slider__promo {
+        width: auto;
     }
 }
 @media (max-width: 700px){
@@ -681,10 +719,19 @@
 }
 @media(max-width: 570px){
     .contacts{
+        &__title {
+            margin-bottom: 25px;
+        }
         &__info{padding-bottom: 35px;}
         &__copyright{font-size: 12px; padding: 12px 7px 11px 7px; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between;
             &:before{display: none;}
         }
+    }
+    .contacts__city-info-phone-link {
+        font-size: 28px;
+    }
+    .contacts__city-info-wrap {
+        margin-left: 15px;
     }
     .smaplink-footer{margin-right: 0;}
     .create-pop{
@@ -732,11 +779,28 @@
     .b-slider{height: 480px;
         &:after{right: -30px;}
         &__bg{top: 15px; right: -38.5%;}
-        &__text{padding: 28px 0 0 15px; margin-bottom: 27px; max-width: 162px;
-            p{line-height: 15px; margin-bottom: 0;}
+        &__text{padding: 28px 0 0 15px; margin-bottom: 27px;
+            p{ margin-bottom: 0;}
             a{margin: 24px 0 0 0px;}
         }
-        &__promo{width: 293px; margin: 0 auto;}
+        &__promo{ margin: 0 auto;}
+    }
+    .team__col {
+        margin-bottom: 20px;
+    }
+    .team__position {
+        margin-bottom: 50px;
+    }
+    .team__position:after {
+        bottom: -27px;
+    }
+    .team__photo {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    .team__wrap {
+        padding: 10px 0 60px;
     }
 }
 @media(max-width: 500px){
@@ -998,5 +1062,16 @@
     }
     .services{
         &__item{width: 100%;}
+    }
+    .made-in__container {
+        max-width: 88%;
+    }
+    .b24-widget-button-position-bottom-right {
+        right: 30px !important;
+        bottom: 30px !important;
+    }
+    .b24-widget-button-inner-container, .bx-touch .b24-widget-button-inner-container {
+        -webkit-transform: scale(.5) !important;
+        transform: scale(0.5) !important;
     }
 }
